@@ -1,3 +1,27 @@
+$font: #5e6d70;
+$bg: #2a2c2b;
+$highlight: #1b1d1e;
+$accent: #ff530d;
+
 .sidebar {
-  width: 200px;
+  width: 250px;
+}
+
+.user {
+  background-color: $accent;
+  padding: 16px;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-column-gap: 10px;
+  align-items: center;
+  justify-items: center;
+}
+
+.user-name {
+  color: white;
+  font-size: 14px;
+}
+
+.user-icon img {
+  border-radius: 50%;
 }
