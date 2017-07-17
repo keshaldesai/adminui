@@ -22,3 +22,29 @@ $accent: #ff530d;
 .user-icon img {
   border-radius: 50%;
 }
+
+.tabmenu {
+  background-color: darken($accent, 10%);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+}
+
+.tabmenu-box {
+  transition: all .3s;
+  padding: 8px 16px;
+  color: darken($accent, 20%);
+  cursor: pointer;
+  &:hover {
+    background-color: darken($accent, 15%);
+  }
+}
+
+.tab-active {
+  background-color: darken($accent, 30%);
+  color: darken($accent, 10%);
+  &:hover {
+    background-color: darken($accent, 30%);
+  }
+}
