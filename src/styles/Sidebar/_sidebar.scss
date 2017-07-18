@@ -23,7 +23,6 @@ $accent: #ff530d;
   background-color: darken($accent, 10%);
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  justify-items: center;
   align-items: center;
 }
 
