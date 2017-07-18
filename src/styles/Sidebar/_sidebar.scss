@@ -45,5 +45,22 @@ $accent: #ff530d;
 }
 
 .tab {
-  padding: 20px 16px;
+  padding: 20px 0;
+}
+
+.tab-item {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 12px 24px;
+  i {
+    padding-right: 16px;
+  }
+}
+
+.tab-title {
+  font-size: 14px;
+  font-weight: bolder;
+  padding: 0px 24px;
 }
