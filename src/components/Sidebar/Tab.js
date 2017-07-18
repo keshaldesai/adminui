@@ -1,7 +1,7 @@
 import React from "react";
 
 function Tab({ icon, active, index, handleClick }) {
-  const isActive = active ? " tab-active" : "";
+  const isActive = active ? " tabmenu-active" : "";
   return (
     <div
       className={"tabmenu-box" + isActive}

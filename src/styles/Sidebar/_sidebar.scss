@@ -36,10 +36,14 @@ $accent: #ff530d;
   }
 }
 
-.tab-active {
+.tabmenu-active {
   background-color: darken($accent, 30%);
   color: darken($accent, 10%);
   &:hover {
     background-color: darken($accent, 30%);
   }
+}
+
+.tab {
+  padding: 20px 16px;
 }
