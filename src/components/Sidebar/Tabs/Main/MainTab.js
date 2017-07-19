@@ -7,7 +7,7 @@ class MainTab extends Component {
       <div className="tab tab-main">
         <div className="tab-pages">
           <div className="tab-title">PAGES</div>
-          <TabItem icon="tachometer" title="Dashboard" />
+          <TabItem icon="tachometer" title="Dashboard" active={true} />
           <TabItem icon="envelope-o" title="Mailbox" />
           <TabItem icon="picture-o" title="Gallery" />
           <TabItem icon="share-alt" title="Social" />

@@ -32,7 +32,7 @@ class Sidebar extends Component {
       case 3:
         return <HistoryTab />;
       case 4:
-        return <AlertTab s />;
+        return <AlertTab />;
       default:
         return <div />;
     }

@@ -3,6 +3,11 @@ $bg: #2a2c2b;
 $highlight: #1b1d1e;
 $accent: #ff530d;
 
+.sidebar {
+  user-select: none;
+  cursor: default;
+}
+
 .user {
   background-color: $accent;
   padding: 16px 24px;
@@ -15,7 +20,7 @@ $accent: #ff530d;
   color: white;
 }
 
-.user-icon img {
+.user img {
   border-radius: 50%;
 }
 
@@ -27,12 +32,12 @@ $accent: #ff530d;
 }
 
 .tabmenu-box {
-  transition: all .3s;
   padding: 8px 16px;
   color: darken($accent, 25%);
   cursor: pointer;
   &:hover {
     background-color: darken($accent, 15%);
+    transition: background-color .3s;
   }
 }
 
@@ -48,19 +53,30 @@ $accent: #ff530d;
   padding: 20px 0;
 }
 
+.tab-title {
+  font-size: 14px;
+  font-weight: bolder;
+  padding: 16px 24px;
+}
+
 .tab-item {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
   justify-content: flex-start;
   padding: 12px 24px;
+  cursor: pointer;
   i {
     padding-right: 16px;
   }
+  &:hover {
+    background-color: darken($bg, 3%);
+    transition: background-color .3s;
+  }
 }
 
-.tab-title {
-  font-size: 14px;
-  font-weight: bolder;
-  padding: 0px 24px;
+.tab-item-active {
+  background-color: darken($bg, 6%);
+  border-left: 6px solid $accent;
+  padding-left: 18px;
 }
