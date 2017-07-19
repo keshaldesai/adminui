@@ -3,31 +3,64 @@ import TabItem from "../TabItem";
 import { Link } from "react-router-dom";
 
 class MainTab extends Component {
+  renderTabItems(arr, activePage) {
+    return arr.map((tab, index) => {
+      const { url, icon, title, children } = tab;
+      if (children) {
+        return (
+          <TabItem
+            key={url}
+            icon={icon}
+            title={title}
+            active={activePage === `/${url}`}
+          >
+            {this.renderTabItems(children, activePage)}
+          </TabItem>
+        );
+      }
+      return (
+        <Link to={`/${url}`} key={url}>
+          <TabItem
+            icon={icon}
+            title={title}
+            active={activePage === `/${url}`}
+          />
+        </Link>
+      );
+    });
+  }
+
   render() {
     const { activePage } = this.props;
     const pages = [
-      { icon: "tachometer", title: "Dashboard", key: "dashboard" },
-      { icon: "envelope-o", title: "Mailbox", key: "mailbox" },
-      { icon: "picture-o", title: "Gallery", key: "gallery" },
-      { icon: "share-alt", title: "Social", key: "social" },
-      { icon: "newspaper-o", title: "Blog", key: "blog" }
+      { icon: "tachometer", title: "Dashboard", url: "dashboard" },
+      {
+        icon: "envelope-o",
+        title: "Mailbox",
+        url: "mailbox",
+        children: [
+          { icon: "inbox", title: "Inbox", url: "mailbox/inbox" },
+          { icon: "envelope-open-o", title: "Mail", url: "mailbox/mail" },
+          { icon: "pencil-square-o", title: "Compose", url: "mailbox/compose" }
+        ]
+      },
+      { icon: "picture-o", title: "Gallery", url: "gallery" },
+      { icon: "share-alt", title: "Social", url: "social" },
+      {
+        icon: "newspaper-o",
+        title: "Blog",
+        url: "blog",
+        children: [
+          { icon: "server", title: "Posts", url: "blog/posts" },
+          { icon: "file-text-o", title: "Single Post", url: "blog/post" }
+        ]
+      }
     ];
     return (
       <div className="tab tab-main">
         <div className="tab-pages">
           <div className="tab-title">PAGES</div>
-          {pages.map((page, index) => {
-            const { key, icon, title } = page;
-            return (
-              <Link to={`/${key}`} key={key}>
-                <TabItem
-                  icon={icon}
-                  title={title}
-                  active={activePage === `/${key}`}
-                />
-              </Link>
-            );
-          })}
+          {this.renderTabItems(pages, activePage)}
         </div>
       </div>
     );

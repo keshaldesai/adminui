@@ -1,6 +1,6 @@
 import React from "react";
 
-function TabItem({ icon, title, alerts, subItems, active }) {
+function TabItem({ icon, title, active, children }) {
   const activeClass = active ? " tab-item-active" : "";
   return (
     <div className={"tab-item" + activeClass}>
@@ -8,9 +8,7 @@ function TabItem({ icon, title, alerts, subItems, active }) {
       <div className="tab-item-title">
         {title}
       </div>
-      <div className="tab-item-alert">
-        {alerts}
-      </div>
+      {children}
     </div>
   );
 }
