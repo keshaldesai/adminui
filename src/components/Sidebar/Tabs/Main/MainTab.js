@@ -23,7 +23,7 @@ class MainTab extends Component {
                 <TabItem
                   icon={icon}
                   title={title}
-                  active={activePage === key}
+                  active={activePage === `/${key}`}
                 />
               </Link>
             );
