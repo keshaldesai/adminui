@@ -91,3 +91,9 @@ $accent: #ff530d;
 .tab-item-children {
   margin-left: 24px;
 }
+
+.tab-item-active {
+  .tab-item-header {
+    padding-left: 18px;
+  }
+}

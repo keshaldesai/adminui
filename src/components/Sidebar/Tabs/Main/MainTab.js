@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import TabItem from "../TabItem";
+import TabItem from "./TabItem";
 import { Link } from "react-router-dom";
 
 class MainTab extends Component {

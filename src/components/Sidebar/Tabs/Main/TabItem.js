@@ -10,9 +10,11 @@ function TabItem({ icon, title, active, children }) {
           {title}
         </div>
       </div>
-      <div className="tab-item-children">
-        {children}
-      </div>
+      {children
+        ? <div className="tab-item-children">
+            {children}
+          </div>
+        : ""}
     </div>
   );
 }
