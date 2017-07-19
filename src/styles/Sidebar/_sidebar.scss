@@ -53,6 +53,11 @@ $accent: #ff530d;
   padding: 20px 0;
 }
 
+.tab-pages a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
 .tab-title {
   font-size: 14px;
   font-weight: bolder;

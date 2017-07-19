@@ -22,9 +22,10 @@ class Sidebar extends Component {
 
   renderTab() {
     const { activeTab } = this.state;
+    const { activePage } = this.props;
     switch (activeTab) {
       case 0:
-        return <MainTab />;
+        return <MainTab activePage={activePage} />;
       case 1:
         return <SocialTab />;
       case 2:
