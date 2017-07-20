@@ -1,3 +1,5 @@
+@import './_main.scss';
+
 $font: #5e6d70;
 $bg: #2a2c2b;
 $highlight: #1b1d1e;
@@ -63,46 +65,4 @@ $accent: #ff530d;
   font-size: 14px;
   font-weight: bolder;
   padding: 16px 24px;
-}
-
-.tab-item {
-  cursor: pointer;
-}
-
-.tab-item-active {
-  background-color: darken($bg, 6%);
-  border-left: 6px solid $accent;
-}
-
-.tab-item-header {
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 12px 24px;
-  i {
-    padding-right: 16px;
-  }
-  &:hover {
-    background-color: darken($bg, 3%);
-    transition: background-color .3s;
-  }
-}
-
-.tab-item-children {
-  margin-left: 24px;
-}
-
-.tab-item-active {
-  .tab-item-header {
-    padding-left: 18px;
-  }
-}
-
-.tab-item-open {
-  transition: all .3s;
-  margin-left: auto;
-  i {
-    padding: 0;
-  }
 }

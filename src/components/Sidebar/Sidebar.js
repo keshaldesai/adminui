@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import User from "./User";
 import TabMenu from "./TabMenu";
 import MainTab from "./Tabs/Main/MainTab";
-import SocialTab from "./Tabs/SocialTab";
+import SocialTab from "./Tabs/Social/SocialTab";
 import StatisticsTab from "./Tabs/StatisticsTab";
 import HistoryTab from "./Tabs/HistoryTab";
 import AlertTab from "./Tabs/AlertTab";
