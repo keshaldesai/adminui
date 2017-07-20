@@ -46,6 +46,7 @@ $accent: #ff530d;
   color: darken($accent, 10%);
   &:hover {
     background-color: darken($accent, 30%);
+    transition: background-color .3s;
   }
 }
 
@@ -85,6 +86,9 @@ $accent: #ff530d;
   &:hover {
     background-color: darken($bg, 3%);
     transition: background-color .3s;
+  }
+  .fa-caret-left {
+    align-self: flex-end;
   }
 }
 

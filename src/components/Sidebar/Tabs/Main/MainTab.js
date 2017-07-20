@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import TabItem from "./TabItem";
+import TabParent from "./TabParent";
 import { Link } from "react-router-dom";
 
 class MainTab extends Component {
@@ -15,25 +16,19 @@ class MainTab extends Component {
           regex = /^(\/blog)/;
         }
         return (
-          <TabItem
+          <TabParent
             key={url}
             icon={icon}
             title={title}
             active={regex.test(activePage)}
-            parent={true}
           >
             {this.renderTabItems(children, activePage)}
-          </TabItem>
+          </TabParent>
         );
       }
       return (
         <Link to={url} key={url}>
-          <TabItem
-            icon={icon}
-            title={title}
-            active={activePage === url}
-            parent={false}
-          />
+          <TabItem icon={icon} title={title} active={activePage === url} />
         </Link>
       );
     });

@@ -1,9 +1,7 @@
 import React from "react";
-import TabChild from "./TabChild";
 
 function TabItem({ icon, title, active, children }) {
   const activeClass = active ? " tab-item-active" : "";
-  const subMenu = children ? <TabChild items={children} /> : "";
   return (
     <div className={"tab-item" + activeClass}>
       <div className="tab-item-header">
@@ -12,7 +10,6 @@ function TabItem({ icon, title, active, children }) {
           {title}
         </div>
       </div>
-      {subMenu}
     </div>
   );
 }
