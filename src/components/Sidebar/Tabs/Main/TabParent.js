@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import TabChild from "./TabChild";
 
 class TabParent extends Component {
   render() {
@@ -14,9 +13,9 @@ class TabParent extends Component {
           </div>
           <i className="fa fa-caret-left" aria-hidden="true" />
         </div>
-        <TabChild>
+        <div className="tab-item-children">
           {children}
-        </TabChild>
+        </div>
       </div>
     );
   }
