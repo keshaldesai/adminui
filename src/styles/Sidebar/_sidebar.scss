@@ -87,17 +87,23 @@ $accent: #ff530d;
     background-color: darken($bg, 3%);
     transition: background-color .3s;
   }
-  .fa-caret-left {
-    align-self: flex-end;
-  }
 }
 
 .tab-item-children {
   margin-left: 24px;
+  transition: all 3s;
 }
 
 .tab-item-active {
   .tab-item-header {
     padding-left: 18px;
+  }
+}
+
+.tab-item-open {
+  transition: all .3s;
+  margin-left: auto;
+  i {
+    padding: 0;
   }
 }
