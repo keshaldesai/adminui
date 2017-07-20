@@ -7,23 +7,32 @@ class MainTab extends Component {
     return arr.map((tab, index) => {
       const { url, icon, title, children } = tab;
       if (children) {
+        let regex;
+        if (url === "/mailbox") {
+          regex = /^(\/mailbox)/;
+        }
+        if (url === "/blog") {
+          regex = /^(\/blog)/;
+        }
         return (
           <TabItem
             key={url}
             icon={icon}
             title={title}
-            active={activePage === `/${url}`}
+            active={regex.test(activePage)}
+            parent={true}
           >
             {this.renderTabItems(children, activePage)}
           </TabItem>
         );
       }
       return (
-        <Link to={`/${url}`} key={url}>
+        <Link to={url} key={url}>
           <TabItem
             icon={icon}
             title={title}
-            active={activePage === `/${url}`}
+            active={activePage === url}
+            parent={false}
           />
         </Link>
       );
@@ -33,26 +42,26 @@ class MainTab extends Component {
   render() {
     const { activePage } = this.props;
     const pages = [
-      { icon: "tachometer", title: "Dashboard", url: "dashboard" },
+      { icon: "tachometer", title: "Dashboard", url: "/dashboard" },
       {
         icon: "envelope-o",
         title: "Mailbox",
-        url: "mailbox",
+        url: "/mailbox",
         children: [
-          { icon: "inbox", title: "Inbox", url: "mailbox/inbox" },
-          { icon: "envelope-open-o", title: "Mail", url: "mailbox/mail" },
-          { icon: "pencil-square-o", title: "Compose", url: "mailbox/compose" }
+          { icon: "inbox", title: "Inbox", url: "/mailbox/inbox" },
+          { icon: "envelope-open-o", title: "Mail", url: "/mailbox/mail" },
+          { icon: "pencil-square-o", title: "Compose", url: "/mailbox/compose" }
         ]
       },
-      { icon: "picture-o", title: "Gallery", url: "gallery" },
-      { icon: "share-alt", title: "Social", url: "social" },
+      { icon: "picture-o", title: "Gallery", url: "/gallery" },
+      { icon: "share-alt", title: "Social", url: "/social" },
       {
         icon: "newspaper-o",
         title: "Blog",
-        url: "blog",
+        url: "/blog",
         children: [
-          { icon: "server", title: "Posts", url: "blog/posts" },
-          { icon: "file-text-o", title: "Single Post", url: "blog/post" }
+          { icon: "server", title: "Posts", url: "/blog/posts" },
+          { icon: "file-text-o", title: "Single Post", url: "/blog/post" }
         ]
       }
     ];
