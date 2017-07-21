@@ -24,7 +24,7 @@ class SocialTab extends Component {
 
   render() {
     const { users } = this.state;
-    if (!users) {
+    if (!users || users.length !== 14) {
       return <div className="tab tab-social" />;
     }
     const online = users.slice(0, 4);
