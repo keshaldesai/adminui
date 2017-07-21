@@ -25,7 +25,6 @@ class TabParent extends Component {
     const childStyle = show
       ? { height: "100%", display: "block" }
       : { height: "0", display: "none" };
-    console.log(caretStyle, childStyle);
     return (
       <div className={"tab-item" + activeClass}>
         <div className="tab-item-header" onClick={this.handleClick}>

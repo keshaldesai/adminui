@@ -1,22 +1,36 @@
 import React, { Component } from "react";
 import SocialGroup from "./SocialGroup";
+import axios from "axios";
 
 class SocialTab extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      users: null
+    };
+  }
+
+  componentWillMount() {
+    axios
+      .get(
+        "https://randomuser.me/api/?inc=name,picture,login&results=14&nat=us"
+      )
+      .then(data =>
+        this.setState({
+          users: data.data.results
+        })
+      );
+  }
+
   render() {
-    const online = [
-      "Merle Abbott",
-      "Isadore Okuneva",
-      "Dayna Mohr",
-      "Dakota Kerluke"
-    ];
-    const idle = ["Madilyn O'Reilly", "Laverna Legros", "Michael Haley"];
-    const busy = [
-      "Rogelio Boyle",
-      "Juanita Lubowitz",
-      "Khalil Kautzer",
-      "Katarina Schulist"
-    ];
-    const offline = ["Dejah Prosacco", "Wendell Kunze", "Asha Hills"];
+    const { users } = this.state;
+    if (!users) {
+      return <div className="tab tab-social" />;
+    }
+    const online = users.slice(0, 4);
+    const idle = users.slice(4, 7);
+    const busy = users.slice(7, 11);
+    const offline = users.slice(11);
     return (
       <div className="tab tab-social">
         <div className="tab-title">ONLINE (4)</div>
