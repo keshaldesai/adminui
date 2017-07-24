@@ -7,6 +7,7 @@ import StatisticsTab from "./Tabs/StatisticsTab";
 import HistoryTab from "./Tabs/HistoryTab";
 import AlertTab from "./Tabs/AlertTab";
 import axios from "axios";
+import { CSSTransitionGroup } from "react-transition-group";
 
 class Sidebar extends Component {
   constructor(props) {
@@ -39,17 +40,37 @@ class Sidebar extends Component {
     const { match } = this.props;
     switch (activeTab) {
       case 0:
-        return <MainTab activePage={match.url} />;
+        return (
+          <div key={0}>
+            <MainTab activePage={match.url} />
+          </div>
+        );
       case 1:
-        return <SocialTab users={users} />;
+        return (
+          <div key={1}>
+            <SocialTab users={users} />
+          </div>
+        );
       case 2:
-        return <StatisticsTab />;
+        return (
+          <div key={2}>
+            <StatisticsTab />
+          </div>
+        );
       case 3:
-        return <HistoryTab />;
+        return (
+          <div key={3}>
+            <HistoryTab />
+          </div>
+        );
       case 4:
-        return <AlertTab />;
+        return (
+          <div key={4}>
+            <AlertTab />
+          </div>
+        );
       default:
-        return <div />;
+        return <div key={5} />;
     }
   }
 
@@ -59,7 +80,13 @@ class Sidebar extends Component {
       <div className="sidebar">
         <User />
         <TabMenu activeTab={activeTab} handleClick={this.handleClick} />
-        {this.renderTab()}
+        <CSSTransitionGroup
+          transitionName="tab-transition"
+          transitionEnterTimeout={500}
+          transitionLeaveTimeout={300}
+        >
+          {this.renderTab()}
+        </CSSTransitionGroup>
       </div>
     );
   }

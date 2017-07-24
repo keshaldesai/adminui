@@ -69,3 +69,20 @@ $accent: #ff530d;
   padding: 16px 24px;
   font-family: 'Montserrat', sans-serif;
 }
+
+.tab-transition-enter {
+  opacity: 0.01;
+}
+
+.tab-transition-enter.tab-transition-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in;
+}
+
+.tab-transition-leave {
+  opacity: 1;
+}
+
+.tab-transition-leave.tab-transition-leave-active {
+  opacity: 0.01;
+}
