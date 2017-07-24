@@ -22,7 +22,7 @@ class Sidebar extends Component {
   componentWillMount() {
     axios
       .get(
-        "https://randomuser.me/api/?inc=name,picture,login&results=14&nat=us"
+        "https://randomuser.me/api/?inc=name,picture,login&results=15&nat=us"
       )
       .then(data =>
         this.setState({
@@ -48,7 +48,7 @@ class Sidebar extends Component {
       case 1:
         return (
           <div key={1}>
-            <SocialTab users={users} />
+            <SocialTab users={users.slice(1)} />
           </div>
         );
       case 2:
@@ -75,10 +75,18 @@ class Sidebar extends Component {
   }
 
   render() {
-    const { activeTab } = this.state;
+    const { activeTab, users } = this.state;
+    const user = users
+      ? users[0]
+      : {
+          name: { first: "john", last: "smith" },
+          picture: {
+            thumbnail: "http://via.placeholder.com/35/5e6d70/ffffff?text=User"
+          }
+        };
     return (
       <div className="sidebar">
-        <User />
+        <User user={user} />
         <TabMenu activeTab={activeTab} handleClick={this.handleClick} />
         <CSSTransitionGroup
           transitionName="tab-transition"
