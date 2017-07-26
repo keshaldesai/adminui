@@ -1,0 +1,24 @@
+.history {
+  margin-left: 40px;
+  margin-right: 24px;
+  padding: 16px 32px;
+  border-left: 2px solid grey;
+  position: relative;
+  font-size: 14px;
+  .history-event {
+    margin-bottom: 16px;
+  }
+  .social-user {
+    padding: 8px 0;
+    .social-name {
+      padding: 0;
+    }
+    img {
+      position: absolute;
+      left: -20px;
+    }
+  }
+  .history-date {
+    color: white;
+  }
+}

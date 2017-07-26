@@ -14,7 +14,7 @@ class Sidebar extends Component {
     super(props);
     this.handleClick = this.handleClick.bind(this);
     this.state = {
-      activeTab: 2,
+      activeTab: 3,
       users: null
     };
   }
@@ -41,6 +41,9 @@ class Sidebar extends Component {
   renderTab() {
     const { activeTab, users } = this.state;
     const { match } = this.props;
+    if (!users || users.length !== 15) {
+      return;
+    }
     switch (activeTab) {
       case 0:
         return (

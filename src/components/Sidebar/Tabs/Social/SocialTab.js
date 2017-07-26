@@ -2,9 +2,6 @@ import React from "react";
 import SocialGroup from "./SocialGroup";
 
 const SocialTab = ({ users }) => {
-  if (!users || users.length !== 14) {
-    return <div className="tab tab-social" />;
-  }
   const online = users.slice(0, 4);
   const idle = users.slice(4, 7);
   const busy = users.slice(7, 11);
