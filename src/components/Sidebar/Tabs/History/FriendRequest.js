@@ -14,7 +14,7 @@ class FriendRequest extends Component {
   render() {
     const { activeButton } = this.state;
     return (
-      <div className="friendreq event">
+      <div className="friendreq event-item">
         <div className="event-meta">Sent you a friend request!</div>
         <div className="friendreq-buttons">
           <Button

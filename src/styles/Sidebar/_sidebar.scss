@@ -87,3 +87,28 @@ $accent: #ff530d;
 .tab-transition-leave.tab-transition-leave-active {
   opacity: 0;
 }
+
+.timeline {
+  margin-left: 40px;
+  padding: 16px 0px 16px 32px;
+  border-left: 2px solid grey;
+  position: relative;
+  font-size: 14px;
+  .event {
+    padding-right: 24px;
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+    border-bottom: 2px solid grey;
+  }
+  .event-date {
+    color: white;
+  }
+}
+
+.event-meta {
+  font-size: 12px;
+}
+
+.event-item div {
+  padding: 6px 0px;
+}

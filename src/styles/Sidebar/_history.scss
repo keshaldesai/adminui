@@ -1,15 +1,4 @@
 .history {
-  margin-left: 40px;
-  padding: 16px 0px 16px 32px;
-  border-left: 2px solid grey;
-  position: relative;
-  font-size: 14px;
-  .history-event {
-    padding-right: 24px;
-    padding-bottom: 16px;
-    margin-bottom: 16px;
-    border-bottom: 2px solid grey;
-  }
   .social-user {
     padding: 8px 0;
     .social-name {
@@ -20,19 +9,8 @@
       left: -20px;
     }
   }
-  .history-date {
-    color: white;
-  }
   .friendreq-buttons {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
-}
-
-.event-meta {
-  font-size: 12px;
-}
-
-.event div {
-  padding: 6px 0px;
 }

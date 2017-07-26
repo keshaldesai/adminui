@@ -7,7 +7,7 @@ class HistoryTab extends Component {
   render() {
     const { users } = this.props;
     return (
-      <div className="tab history">
+      <div className="tab history timeline">
         <HistoryEvent date="Jul 26, 2017" user={users[0]}>
           <FriendRequest />
         </HistoryEvent>
@@ -20,7 +20,7 @@ class HistoryTab extends Component {
           </SocialImage>
         </HistoryEvent>
         <HistoryEvent date="Jul 10, 2017" user={users[2]}>
-          <div className="event">
+          <div className="event-item">
             <div className="event-meta">
               Hey you free tomorrow? Lets go shopping!
             </div>
