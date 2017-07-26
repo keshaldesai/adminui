@@ -4,9 +4,6 @@
   border-left: 2px solid grey;
   position: relative;
   font-size: 14px;
-  .friendreq div {
-    padding: 6px 0px;
-  }
   .history-event {
     margin-bottom: 16px;
   }
@@ -31,4 +28,8 @@
 
 .event-meta {
   font-size: 12px;
+}
+
+.event div {
+  padding: 6px 0px;
 }

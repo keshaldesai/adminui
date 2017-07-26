@@ -37,3 +37,10 @@ body {
   cursor: pointer;
   transition: all 300ms;
 }
+
+.image {
+  img {
+    width: 100%;
+    border-radius: 4px;
+  }
+}
