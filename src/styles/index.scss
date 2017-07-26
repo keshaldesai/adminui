@@ -24,3 +24,15 @@ body {
   background-color: #efefef;
   height: 2000px;
 }
+
+.button {
+  text-align: center;
+  padding: 4px 8px;
+  border: 2px solid;
+  border-radius: 20px;
+  font-size: 12px;
+  cursor: pointer;
+  &:hover {
+    color: white !important;
+  }
+}

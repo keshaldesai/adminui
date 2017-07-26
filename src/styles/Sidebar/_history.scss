@@ -1,7 +1,6 @@
 .history {
   margin-left: 40px;
-  margin-right: 24px;
-  padding: 16px 32px;
+  padding: 16px 24px 16px 32px;
   border-left: 2px solid grey;
   position: relative;
   font-size: 14px;
@@ -20,5 +19,10 @@
   }
   .history-date {
     color: white;
+  }
+  .friendreq-buttons {
+    padding-top: 16px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 }
