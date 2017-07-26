@@ -19,7 +19,13 @@ class HistoryTab extends Component {
             Visiting Grand Central at 89 E 42nd St, New York, NY 10017
           </SocialImage>
         </HistoryEvent>
-        <HistoryEvent date="Jul 10, 2017" user={users[2]} />
+        <HistoryEvent date="Jul 10, 2017" user={users[2]}>
+          <div className="event">
+            <div className="event-meta">
+              Hey you free tomorrow? Lets go shopping!
+            </div>
+          </div>
+        </HistoryEvent>
       </div>
     );
   }
