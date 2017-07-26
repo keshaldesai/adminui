@@ -1,5 +1,6 @@
 @import "./_main.scss";
 @import "./_social.scss";
+@import "./_statistics.scss";
 
 $font: #5e6d70;
 $bg: #2a2c2b;
@@ -56,10 +57,6 @@ $accent: #ff530d;
   }
 }
 
-.tab {
-  padding: 20px 0;
-}
-
 .tab-pages a {
   color: inherit;
   text-decoration: inherit;
@@ -83,9 +80,9 @@ $accent: #ff530d;
 }
 
 .tab-transition-leave {
-  opacity: 1;
+  opacity: 0;
 }
 
 .tab-transition-leave.tab-transition-leave-active {
-  opacity: 0.01;
+  opacity: 0;
 }

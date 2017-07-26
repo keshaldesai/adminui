@@ -3,8 +3,8 @@ import User from "./User";
 import TabMenu from "./TabMenu";
 import MainTab from "./Tabs/Main/MainTab";
 import SocialTab from "./Tabs/Social/SocialTab";
-import StatisticsTab from "./Tabs/StatisticsTab";
-import HistoryTab from "./Tabs/HistoryTab";
+import StatisticsTab from "./Tabs/Statistics/StatisticsTab";
+import HistoryTab from "./Tabs/History/HistoryTab";
 import AlertTab from "./Tabs/AlertTab";
 import axios from "axios";
 import { CSSTransitionGroup } from "react-transition-group";
@@ -14,21 +14,24 @@ class Sidebar extends Component {
     super(props);
     this.handleClick = this.handleClick.bind(this);
     this.state = {
-      activeTab: 0,
+      activeTab: 2,
       users: null
     };
   }
 
   componentWillMount() {
     axios
-      .get(
-        "https://randomuser.me/api/?inc=name,picture,login&results=15&nat=us"
-      )
-      .then(data =>
-        this.setState({
-          users: data.data.results
-        })
-      );
+      .get("https://randomuser.me/api/?inc=name,picture&results=15&nat=us")
+      .then(response => {
+        const { results } = response.data;
+        const users = results.map(user => {
+          const name = `${capitalize(user.name.first)} ${capitalize(
+            user.name.last
+          )}`;
+          return { name, picture: user.picture.thumbnail };
+        });
+        this.setState({ users });
+      });
   }
 
   handleClick(index) {
@@ -60,7 +63,7 @@ class Sidebar extends Component {
       case 3:
         return (
           <div key={3}>
-            <HistoryTab />
+            <HistoryTab users={users.slice(1, 4)} />
           </div>
         );
       case 4:
@@ -79,10 +82,8 @@ class Sidebar extends Component {
     const user = users
       ? users[0]
       : {
-          name: { first: "john", last: "smith" },
-          picture: {
-            thumbnail: "http://via.placeholder.com/35/5e6d70/ffffff?text=User"
-          }
+          name: "John Smith",
+          picture: "http://via.placeholder.com/35/5e6d70/ffffff?text=User"
         };
     return (
       <div className="sidebar">
@@ -98,6 +99,10 @@ class Sidebar extends Component {
       </div>
     );
   }
+}
+
+function capitalize(name) {
+  return name.charAt(0).toUpperCase() + name.slice(1);
 }
 
 export default Sidebar;
