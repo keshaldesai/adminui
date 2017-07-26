@@ -7,11 +7,11 @@ class HistoryTab extends Component {
     const { users } = this.props;
     return (
       <div className="tab history">
-        <HistoryEvent date="Jul 26, 2017" comp="Example" user={users[0]}>
+        <HistoryEvent date="Jul 26, 2017" user={users[0]}>
           <FriendRequest />
         </HistoryEvent>
-        <HistoryEvent date="Jul 25, 2017" comp="Other" user={users[1]} />
-        <HistoryEvent date="Jul 10, 2017" comp="Another" user={users[2]} />
+        <HistoryEvent date="Jul 25, 2017" user={users[1]} />
+        <HistoryEvent date="Jul 10, 2017" user={users[2]} />
       </div>
     );
   }
