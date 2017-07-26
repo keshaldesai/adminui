@@ -28,11 +28,12 @@ body {
 .button {
   text-align: center;
   padding: 4px 8px;
+  margin: 0px 2px;
   border: 2px solid;
   border-radius: 20px;
-  font-size: 12px;
+  font-size: 10px;
+  font-weight: bolder;
+  letter-spacing: 2px;
   cursor: pointer;
-  &:hover {
-    color: white !important;
-  }
+  transition: all 300ms;
 }
