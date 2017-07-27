@@ -5,7 +5,7 @@ import MainTab from "./Tabs/Main/MainTab";
 import SocialTab from "./Tabs/Social/SocialTab";
 import StatisticsTab from "./Tabs/Statistics/StatisticsTab";
 import HistoryTab from "./Tabs/History/HistoryTab";
-import AlertTab from "./Tabs/AlertTab";
+import AlertTab from "./Tabs/Alert/AlertTab";
 import axios from "axios";
 import { CSSTransitionGroup } from "react-transition-group";
 
@@ -14,7 +14,7 @@ class Sidebar extends Component {
     super(props);
     this.handleClick = this.handleClick.bind(this);
     this.state = {
-      activeTab: 3,
+      activeTab: 4,
       users: null
     };
   }

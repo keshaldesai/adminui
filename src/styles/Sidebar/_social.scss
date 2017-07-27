@@ -1,5 +1,12 @@
 .social-group {
   padding: 12px 0;
+  .social-user {
+    cursor: pointer;
+    &:hover {
+      background-color: darken($bg, 3%);
+      transition: background-color .3s;
+    }
+  }
 }
 
 .social-user {
@@ -7,7 +14,6 @@
   flex-flow: row nowrap;
   align-items: center;
   padding: 4px 24px;
-  cursor: pointer;
   img {
     width: 30px;
     border-radius: 50%;
@@ -15,10 +21,6 @@
   }
   .social-name {
     padding-left: 8px;
-  }
-  &:hover {
-    background-color: darken($bg, 3%);
-    transition: background-color .3s;
   }
 }
 
