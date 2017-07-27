@@ -1,0 +1,28 @@
+.header {
+  background-color: #1b1c1c;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  .logo {
+    color: white;
+    font-size: 20px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    margin-left: 16px;
+  }
+  .settings {
+    margin-left: auto;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    text-align: center;
+    span {
+      border-left: 1px solid darken(#839497, 20%);
+      padding: 16px 16px;
+    }
+  }
+  .fa-user {
+    padding-right: 16px;
+  }
+}
