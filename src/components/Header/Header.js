@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import HeaderItem from "./HeaderItem";
 
 class Header extends Component {
   render() {
@@ -9,33 +10,19 @@ class Header extends Component {
           <span>My Business</span>
         </div>
         <div className="settings">
-          <div className="color-settings header-item">
-            <i
-              className="fa fa-circle fa-lg header-button"
-              aria-hidden="true"
-            />
-          </div>
-          <div className="gen-settings header-item">
-            <i className="fa fa-user fa-lg header-button" aria-hidden="true" />
-            <i className="fa fa-cog fa-lg header-button" aria-hidden="true" />
-          </div>
-          <div className="notifs header-item">
-            <i
-              className="fa fa-envelope fa-lg header-button"
-              aria-hidden="true"
-            />
-            <i
-              className="fa fa-bullhorn fa-lg header-button"
-              aria-hidden="true"
-            />
-            <i className="fa fa-rss fa-lg header-button" aria-hidden="true" />
-          </div>
-          <div className="logout header-item">
-            <i
-              className="fa fa-power-off fa-lg header-button"
-              aria-hidden="true"
-            />
-          </div>
+          <HeaderItem button="circle" />
+          <HeaderItem button="user" />
+          <HeaderItem button="envelope" />
+          <HeaderItem button="bullhorn">
+            <div className="notifs">
+              <div className="drop-caret ">
+                <i className="fa fa-caret-up fa-2x" aria-hidden="true" />
+              </div>
+              <div className="drop-container" />
+            </div>
+          </HeaderItem>
+          <HeaderItem button="rss" />
+          <HeaderItem button="power-off" />
         </div>
       </div>
     );
