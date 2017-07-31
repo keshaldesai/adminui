@@ -10,23 +10,31 @@ class Header extends Component {
         </div>
         <div className="settings">
           <div className="color-settings header-item">
-            <i className="fa fa-circle fa-lg" aria-hidden="true" />
+            <i
+              className="fa fa-circle fa-lg header-button"
+              aria-hidden="true"
+            />
           </div>
           <div className="gen-settings header-item">
-            <i className="fa fa-user fa-lg" aria-hidden="true" />
-            <i className="fa fa-cog fa-lg" aria-hidden="true" />
+            <i className="fa fa-user fa-lg header-button" aria-hidden="true" />
+            <i className="fa fa-cog fa-lg header-button" aria-hidden="true" />
           </div>
-          <div className="mail-quickicon header-item">
-            <i className="fa fa-envelope fa-lg" aria-hidden="true" />
-          </div>
-          <div className="alert-quickicon header-item">
-            <i className="fa fa-bullhorn fa-lg" aria-hidden="true" />
-          </div>
-          <div className="feed-quickicon header-item">
-            <i className="fa fa-rss fa-lg" aria-hidden="true" />
+          <div className="notifs header-item">
+            <i
+              className="fa fa-envelope fa-lg header-button"
+              aria-hidden="true"
+            />
+            <i
+              className="fa fa-bullhorn fa-lg header-button"
+              aria-hidden="true"
+            />
+            <i className="fa fa-rss fa-lg header-button" aria-hidden="true" />
           </div>
           <div className="logout header-item">
-            <i className="fa fa-power-off fa-lg" aria-hidden="true" />
+            <i
+              className="fa fa-power-off fa-lg header-button"
+              aria-hidden="true"
+            />
           </div>
         </div>
       </div>

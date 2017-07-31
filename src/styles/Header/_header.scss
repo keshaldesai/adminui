@@ -3,6 +3,7 @@
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
+  font-size: 20px;
   .logo {
     color: white;
     font-size: 20px;
@@ -19,14 +20,27 @@
     text-align: center;
     .header-item {
       border-left: 1px solid darken(#839497, 20%);
-      padding: 16px 24px;
     }
-    .fa-user {
-      padding-right: 16px;
+    .header-button {
+      padding: 24px 24px;
+      cursor: pointer;
+    }
+    .header-button:hover {
+      color: white;
     }
   }
 }
 
 .color-settings {
   color: #ff530d;
+}
+
+.logout {
+  background-color: #d93f00;
+  color: white;
+  font-weight: bolder;
+  &:hover {
+    transition: background-color 300ms;
+    background-color: lighten(#d93f00, 10%);
+  }
 }
