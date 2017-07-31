@@ -9,25 +9,25 @@ class Header extends Component {
           <span>My Business</span>
         </div>
         <div className="settings">
-          <span className="color-settings">
+          <div className="color-settings header-item">
             <i className="fa fa-circle fa-lg" aria-hidden="true" />
-          </span>
-          <span className="gen-settings">
+          </div>
+          <div className="gen-settings header-item">
             <i className="fa fa-user fa-lg" aria-hidden="true" />
             <i className="fa fa-cog fa-lg" aria-hidden="true" />
-          </span>
-          <span className="mail-quickicon">
+          </div>
+          <div className="mail-quickicon header-item">
             <i className="fa fa-envelope fa-lg" aria-hidden="true" />
-          </span>
-          <span className="alert-quickicon">
+          </div>
+          <div className="alert-quickicon header-item">
             <i className="fa fa-bullhorn fa-lg" aria-hidden="true" />
-          </span>
-          <span className="feed-quickicon">
+          </div>
+          <div className="feed-quickicon header-item">
             <i className="fa fa-rss fa-lg" aria-hidden="true" />
-          </span>
-          <span className="logout">
+          </div>
+          <div className="logout header-item">
             <i className="fa fa-power-off fa-lg" aria-hidden="true" />
-          </span>
+          </div>
         </div>
       </div>
     );

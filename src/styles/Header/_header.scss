@@ -17,12 +17,16 @@
     flex-flow: row nowrap;
     align-items: center;
     text-align: center;
-    span {
+    .header-item {
       border-left: 1px solid darken(#839497, 20%);
-      padding: 16px 16px;
+      padding: 16px 24px;
+    }
+    .fa-user {
+      padding-right: 16px;
     }
   }
-  .fa-user {
-    padding-right: 16px;
-  }
+}
+
+.color-settings {
+  color: #ff530d;
 }
