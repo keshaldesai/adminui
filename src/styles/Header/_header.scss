@@ -77,9 +77,31 @@
     top: 75px;
     right: 142px;
   }
-  .notifs-group {
-    padding: 4px 16px;
+}
+
+.notifs-one {
+  cursor: pointer;
+  padding: 4px 16px;
+  display: grid;
+  grid-template-columns: 50px 200px;
+  border-bottom: 1px solid darken(#ffffff, 20%);
+  .notifs-pic img {
+    width: 30px;
+    border-radius: 50%;
+  }
+  .notifs-time {
+    font-weight: bolder;
+  }
+  .notifs-type {
+    color: #00a388;
+    font-weight: bolder;
+  }
+  &:hover {
+    background-color: darken(#ffffff, 10%);
+    transition: background-color 300ms;
+  }
+  .notif-buttons {
     display: grid;
-    grid-template-columns: 50px 200px;
+    grid-template-columns: 1fr 1fr;
   }
 }
