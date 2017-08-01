@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import HeaderItem from "./HeaderItem";
+import Notifications from "./Notifications";
 
 class Header extends Component {
   render() {
@@ -14,12 +15,7 @@ class Header extends Component {
           <HeaderItem button="user" />
           <HeaderItem button="envelope" />
           <HeaderItem button="bullhorn">
-            <div className="notifs">
-              <div className="drop-caret ">
-                <i className="fa fa-caret-up fa-2x" aria-hidden="true" />
-              </div>
-              <div className="drop-container" />
-            </div>
+            <Notifications />
           </HeaderItem>
           <HeaderItem button="rss" />
           <HeaderItem button="power-off" />
