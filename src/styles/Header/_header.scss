@@ -58,17 +58,17 @@
   position: absolute;
   background-color: #ffffff;
   border-top: 4px solid #d93f00;
+  border-bottom: 2px solid darken(#ffffff, 20%);
   font-size: 12px;
 }
 
 .drop-title {
-  font-family: 'Montserrat', sans-serif;
   background-color: darken(#ffffff, 10%);
   border-bottom: 1px solid darken(#ffffff, 20%);
   padding: 4px 16px;
 }
 
-.notifs {
+.notif {
   .drop-caret {
     top: 50px;
     right: 166px;
@@ -79,20 +79,36 @@
   }
 }
 
-.notifs-one {
+.notif-one {
   cursor: pointer;
   padding: 4px 16px;
   display: grid;
   grid-template-columns: 50px 200px;
+  align-items: center;
+  grid-column-gap: 8px;
   border-bottom: 1px solid darken(#ffffff, 20%);
-  .notifs-pic img {
-    width: 30px;
-    border-radius: 50%;
+  .notif-icon {
+    .notif-status {
+      font-weight: bolder;
+      color: white;
+      margin: 4px auto;
+      padding: 0px 4px;
+      border-radius: 4px;
+      font-size: 10px;
+    }
+    img {
+      width: 30px;
+      border-radius: 50%;
+    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
-  .notifs-time {
+
+  .notif-time {
     font-weight: bolder;
   }
-  .notifs-type {
+  .notif-type {
     color: #00a388;
     font-weight: bolder;
   }
@@ -100,8 +116,17 @@
     background-color: darken(#ffffff, 10%);
     transition: background-color 300ms;
   }
-  .notif-buttons {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+}
+
+.notif-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: center;
+  background-color: darken(#ffffff, 10%);
+  .notif-button {
+    padding: 4px 0px;
+  }
+  .notif-mark {
+    border-right: 1px solid darken(#ffffff, 20%);
   }
 }

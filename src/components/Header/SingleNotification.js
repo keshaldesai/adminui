@@ -3,18 +3,18 @@ import React from "react";
 const SingleNotification = ({ children, notification }) => {
   const { time, type, snippet } = notification;
   return (
-    <div className="notifs-one">
-      <div className="notifs-pic">
+    <div className="notif-one">
+      <div className="notif-icon">
         {children}
       </div>
-      <div className="notifs-info">
-        <div className="notifs-time">
+      <div className="notif-info">
+        <div className="notif-time">
           {time}
         </div>
-        <div className="notifs-type">
+        <div className="notif-type">
           {type}
         </div>
-        <div className="notifs-snippet">
+        <div className="notif-snippet">
           {snippet}
         </div>
       </div>
