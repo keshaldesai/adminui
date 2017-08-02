@@ -1,0 +1,5 @@
+TODO
+
+Fix notification border
+Highlight when dropdown appears (white color)
+Statistics
