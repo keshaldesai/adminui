@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import SingleNotification from "./SingleNotification";
+import DropItem from "./DropItem";
 
 class Notifications extends Component {
   render() {
@@ -31,7 +31,7 @@ class Notifications extends Component {
         <div className="drop-container">
           <div className="drop-title">YOUR NOTIFICATIONS</div>
           <div className="notif-group">
-            <SingleNotification notification={notifArr[0]}>
+            <DropItem item={notifArr[0]}>
               <img
                 src="https://randomuser.me/api/portraits/thumb/men/24.jpg"
                 alt="thumbnail"
@@ -42,14 +42,14 @@ class Notifications extends Component {
               >
                 NEW
               </div>
-            </SingleNotification>
-            <SingleNotification notification={notifArr[1]}>
+            </DropItem>
+            <DropItem item={notifArr[1]}>
               <img
                 src="https://randomuser.me/api/portraits/thumb/women/80.jpg"
                 alt="thumbnail"
               />
-            </SingleNotification>
-            <SingleNotification notification={notifArr[2]}>
+            </DropItem>
+            <DropItem item={notifArr[2]}>
               <i className="fa fa-github fa-3x" aria-hidden="true" />
               <div
                 className="notif-status"
@@ -57,7 +57,7 @@ class Notifications extends Component {
               >
                 ALERT
               </div>
-            </SingleNotification>
+            </DropItem>
           </div>
           <div className="notif-buttons">
             <div className="notif-button notif-mark">MARK ALL READ</div>
