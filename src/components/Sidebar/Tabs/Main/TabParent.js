@@ -22,7 +22,7 @@ class TabParent extends Component {
     const caretStyle = show
       ? { transform: "rotate(-90deg)" }
       : { transform: "none" };
-    const childStyle = show ? { maxHeight: "500px" } : { maxHeight: "0px" };
+    const childStyle = show ? { maxHeight: "250px" } : { maxHeight: "0px" };
     return (
       <div className={"tab-item" + activeClass}>
         <div className="tab-item-header" onClick={this.handleClick}>
