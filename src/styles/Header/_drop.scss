@@ -12,7 +12,7 @@ $menuacc: darken($menus, 5%);
 .drop-container {
   position: absolute;
   border-top: 4px solid $theme;
-  font-size: 12px;
+  font-size: 11px;
   box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -32,6 +32,16 @@ $menuacc: darken($menus, 5%);
   .drop-container {
     top: 75px;
     right: 142px;
+  }
+}
+.feed {
+  .drop-caret {
+    top: 49px;
+    right: 95px;
+  }
+  .drop-container {
+    top: 75px;
+    right: 71px;
   }
 }
 

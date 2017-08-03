@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import HeaderItem from "./HeaderItem";
+import HeaderItemDrop from "./HeaderItemDrop";
 import Notifications from "./Notifications";
+import Feed from "./Feed";
 
 class Header extends Component {
   render() {
@@ -14,10 +16,12 @@ class Header extends Component {
           <HeaderItem button="circle" />
           <HeaderItem button="user" />
           <HeaderItem button="envelope" />
-          <HeaderItem button="bullhorn">
+          <HeaderItemDrop button="bullhorn" type="notif">
             <Notifications />
-          </HeaderItem>
-          <HeaderItem button="rss" />
+          </HeaderItemDrop>
+          <HeaderItemDrop button="rss" type="feed">
+            <Feed />
+          </HeaderItemDrop>
           <HeaderItem button="power-off" />
         </div>
       </div>

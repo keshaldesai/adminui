@@ -24,45 +24,40 @@ class Notifications extends Component {
       }
     ];
     return (
-      <div className="notif">
-        <div className="drop-caret ">
-          <i className="fa fa-caret-up fa-2x" aria-hidden="true" />
+      <div className="drop-container">
+        <div className="drop-title">YOUR NOTIFICATIONS</div>
+        <div className="notif-group">
+          <DropItem item={notifArr[0]}>
+            <img
+              src="https://randomuser.me/api/portraits/thumb/men/24.jpg"
+              alt="thumbnail"
+            />
+            <div
+              className="notif-status"
+              style={{ backgroundColor: "#3498DB" }}
+            >
+              NEW
+            </div>
+          </DropItem>
+          <DropItem item={notifArr[1]}>
+            <img
+              src="https://randomuser.me/api/portraits/thumb/women/80.jpg"
+              alt="thumbnail"
+            />
+          </DropItem>
+          <DropItem item={notifArr[2]}>
+            <i className="fa fa-github fa-3x" aria-hidden="true" />
+            <div
+              className="notif-status"
+              style={{ backgroundColor: "#E74C3C" }}
+            >
+              ALERT
+            </div>
+          </DropItem>
         </div>
-        <div className="drop-container">
-          <div className="drop-title">YOUR NOTIFICATIONS</div>
-          <div className="notif-group">
-            <DropItem item={notifArr[0]}>
-              <img
-                src="https://randomuser.me/api/portraits/thumb/men/24.jpg"
-                alt="thumbnail"
-              />
-              <div
-                className="notif-status"
-                style={{ backgroundColor: "#3498DB" }}
-              >
-                NEW
-              </div>
-            </DropItem>
-            <DropItem item={notifArr[1]}>
-              <img
-                src="https://randomuser.me/api/portraits/thumb/women/80.jpg"
-                alt="thumbnail"
-              />
-            </DropItem>
-            <DropItem item={notifArr[2]}>
-              <i className="fa fa-github fa-3x" aria-hidden="true" />
-              <div
-                className="notif-status"
-                style={{ backgroundColor: "#E74C3C" }}
-              >
-                ALERT
-              </div>
-            </DropItem>
-          </div>
-          <div className="notif-buttons">
-            <div className="notif-button notif-mark">MARK ALL READ</div>
-            <div className="notif-button notif-view">VIEW ALL</div>
-          </div>
+        <div className="notif-buttons">
+          <div className="notif-button notif-mark">MARK ALL READ</div>
+          <div className="notif-button notif-view">VIEW ALL</div>
         </div>
       </div>
     );
