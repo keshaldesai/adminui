@@ -3,6 +3,9 @@ $theme: #ff530d;
 $menus: #efefef;
 $borders: darken($menus, 10%);
 $menuacc: darken($menus, 5%);
+.header-drop {
+  display: none;
+}
 
 .drop-caret {
   position: absolute;
@@ -105,4 +108,22 @@ $menuacc: darken($menus, 5%);
 
 .notif-mark {
   border-right: 1px solid $borders;
+}
+
+.item-rss:hover {
+  .header-drop {
+    display: block;
+  }
+  .header-button {
+    color: white;
+  }
+}
+
+.item-bullhorn:hover {
+  .header-drop {
+    display: block;
+  }
+  .header-button {
+    color: white;
+  }
 }

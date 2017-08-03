@@ -5,7 +5,7 @@ class HeaderItemDrop extends Component {
   render() {
     const { button, children, type } = this.props;
     return (
-      <div className="header-item">
+      <div className={`header-item item-${button}`}>
         <div className={`header-button button-${button}`}>
           <i className={`fa fa-${button} fa-lg`} aria-hidden="true" />
         </div>
