@@ -4,13 +4,17 @@
 @import "./_history.scss";
 @import "./_alert.scss";
 
-$font: #5e6d70;
 $bg: #2a2c2b;
 $highlight: #1b1d1e;
-$accent: #ff530d;
+$theme: #ff530d;
+
+.sidebar {
+  background-color: $bg;
+  height: 100vh;
+}
 
 .user {
-  background-color: $accent;
+  background-color: $theme;
   padding: 16px 24px;
   display: grid;
   grid-template-columns: 1fr 3fr;
@@ -29,7 +33,7 @@ $accent: #ff530d;
 }
 
 .tabmenu {
-  background-color: darken($accent, 10%);
+  background-color: darken($theme, 10%);
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   align-items: center;
@@ -37,19 +41,19 @@ $accent: #ff530d;
 
 .tabmenu-box {
   padding: 8px 16px;
-  color: darken($accent, 25%);
+  color: darken($theme, 25%);
   cursor: pointer;
   &:hover {
-    background-color: darken($accent, 15%);
+    background-color: darken($theme, 15%);
     transition: background-color .3s;
   }
 }
 
 .tabmenu-active {
-  background-color: darken($accent, 30%);
-  color: darken($accent, 10%);
+  background-color: darken($theme, 30%);
+  color: darken($theme, 10%);
   &:hover {
-    background-color: darken($accent, 30%);
+    background-color: darken($theme, 30%);
     transition: background-color .3s;
   }
 }

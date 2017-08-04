@@ -1,11 +1,10 @@
-@import './Sidebar/_sidebar.scss';
-@import './Dashboard/_dashboard.scss';
-@import './Header/_header.scss';
+@import "./Sidebar/_sidebar.scss";
+@import "./Dashboard/_dashboard.scss";
+@import "./Header/_header.scss";
+@import "./Mailbox/_mailbox.scss";
 
 $font: #839497;
-$bg: #2a2c2b;
-$highlight: #1b1d1e;
-$accent: #ff530d;
+$bg: #efefef;
 
 body {
   margin: 0;
@@ -24,8 +23,9 @@ body {
 }
 
 .main {
-  background-color: #efefef;
-  min-height: 100vh;
+  background-color: #ffffff;
+  margin: 24px;
+  border-radius: 4px;
 }
 
 .button {
