@@ -1,3 +1,46 @@
 @import "./_compose.scss";
 @import "./_inbox.scss";
 @import "./_mail.scss";
+
+$menus: #efefef;
+$borders: darken($menus, 10%);
+
+.mb-group {
+  border-bottom: 1px solid $borders;
+}
+
+.mail-reply {
+  border-bottom: none;
+}
+
+.mb-button {
+  border-radius: 20px;
+  border: 2px solid $borders;
+  padding: 2px 12px;
+  margin: 0px 4px;
+  cursor: pointer;
+}
+
+.button-arrow-left:hover {
+  background-color: #00a388;
+  border-color: #00a388;
+  color: #ffffff;
+  transition: all 200ms;
+}
+
+.button-pencil-square-o {
+  background-color: #3498db;
+  border-color: #3498db;
+  color: #ffffff;
+  &:hover {
+    background-color: lighten(#3498db, 5%);
+    border-color: lighten(#3498db, 5%);
+  }
+}
+
+.button-print:hover {
+  background-color: #ff6138;
+  border-color: #ff6138;
+  color: #ffffff;
+  transition: all 200ms;
+}
