@@ -1,7 +1,7 @@
 TODO
 
 Fix notification border
-Highlight when dropdown appears (white color)
 Statistics
 Font-size messes up some social pictures
 CSS cleanup
+Fix reply button borders

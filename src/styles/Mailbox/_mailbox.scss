@@ -17,15 +17,15 @@ $borders: darken($menus, 10%);
   border-radius: 20px;
   border: 2px solid $borders;
   padding: 2px 12px;
-  margin: 0px 4px;
+  margin-right: 8px;
   cursor: pointer;
+  transition: all 200ms;
 }
 
 .button-arrow-left:hover {
   background-color: #00a388;
   border-color: #00a388;
   color: #ffffff;
-  transition: all 200ms;
 }
 
 .button-pencil-square-o {
@@ -42,5 +42,32 @@ $borders: darken($menus, 10%);
   background-color: #ff6138;
   border-color: #ff6138;
   color: #ffffff;
+}
+
+.button-group {
+  border-radius: 20px;
+  margin-right: 8px;
+  cursor: pointer;
   transition: all 200ms;
+  .mb-button {
+    margin: 0;
+  }
+  .mb-button:hover {
+    background-color: #00a388;
+    border-color: #00a388;
+    color: #ffffff;
+  }
+}
+
+.button-reply {
+  border-radius: 20px 0px 0px 20px;
+}
+.button-reply-all {
+  border: none;
+  border-top: 2px solid $borders;
+  border-bottom: 2px solid $borders;
+  border-radius: 0px;
+}
+.button-share {
+  border-radius: 0px 20px 20px 0px;
 }

@@ -1,3 +1,6 @@
 .mail-actions {
   padding: 24px 40px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
 }
