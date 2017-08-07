@@ -7,12 +7,12 @@ import Feed from "./Feed";
 class Header extends Component {
   render() {
     return (
-      <div className="header">
-        <div className="logo">
+      <div className="header flex-row">
+        <div className="logo flex-row">
           <i className="fa fa-pied-piper fa-2x" aria-hidden="true" />
           <span>My Business</span>
         </div>
-        <div className="settings">
+        <div className="settings flex-row">
           <HeaderItem button="circle" />
           <HeaderItem button="user" />
           <HeaderItem button="envelope" />

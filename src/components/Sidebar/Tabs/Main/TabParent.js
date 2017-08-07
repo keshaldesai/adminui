@@ -25,7 +25,7 @@ class TabParent extends Component {
     const childStyle = show ? { maxHeight: "250px" } : { maxHeight: "0px" };
     return (
       <div className={"tab-item" + activeClass}>
-        <div className="tab-item-header" onClick={this.handleClick}>
+        <div className="tab-item-header flex-row" onClick={this.handleClick}>
           <i className={`fa fa-${icon}`} aria-hidden="true" />
           <div className="tab-item-title">
             {title}

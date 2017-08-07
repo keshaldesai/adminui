@@ -6,16 +6,7 @@ $theme: #ff530d;
 
 .header {
   background-color: $bg;
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
   font-size: 20px;
-}
-
-.logo,
-.settings {
-  display: flex;
-  align-items: center;
 }
 
 .logo {

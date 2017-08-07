@@ -13,9 +13,6 @@ $accent: #ff530d;
 }
 
 .tab-item-header {
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
   justify-content: flex-start;
   padding: 12px 24px;
   i {

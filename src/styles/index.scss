@@ -47,3 +47,9 @@ body {
     border-radius: 4px;
   }
 }
+
+.flex-row {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
