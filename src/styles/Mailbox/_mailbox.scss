@@ -6,7 +6,8 @@ $menus: #efefef;
 $borders: darken($menus, 10%);
 
 .mb-block {
-  border-bottom: 1px solid $borders;
+  border-bottom: 1px solid $menus;
+  padding: 24px 32px;
 }
 
 .mail-reply {
