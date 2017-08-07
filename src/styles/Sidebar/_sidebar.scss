@@ -10,7 +10,7 @@ $theme: #ff530d;
 
 .sidebar {
   background-color: $bg;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .user {
