@@ -49,6 +49,7 @@ $menuacc: darken($menus, 5%);
 }
 
 .drop-one {
+  background-color: #ffffff;
   cursor: pointer;
   padding: 4px 16px;
   display: grid;
@@ -111,6 +112,7 @@ $menuacc: darken($menus, 5%);
 }
 
 .item-rss:hover {
+  z-index: 1000;
   .header-drop {
     display: block;
   }
@@ -120,6 +122,7 @@ $menuacc: darken($menus, 5%);
 }
 
 .item-bullhorn:hover {
+  z-index: 1000;
   .header-drop {
     display: block;
   }
