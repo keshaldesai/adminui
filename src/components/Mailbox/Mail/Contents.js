@@ -12,14 +12,20 @@ class Contents extends Component {
           vel purus.
         </p>
         <p>
-          {" "}Fusce efficitur, diam non aliquam scelerisque, erat lacus posuere
-          purus, eget suscipit nisl leo nec arcu. Nam nisl ipsum, blandit vitae
-          hendrerit ut, tincidunt at orci. Aliquam lacinia tempor nibh. Aliquam
-          dictum dignissim dolor a venenatis.
+          Fusce efficitur, diam non aliquam scelerisque, erat lacus posuere
+          purus, eget suscipit nisl leo nec arcu:
         </p>
+        <ul>
+          <li>
+            Nam nisl ipsum, blandit vitae hendrerit ut, tincidunt at orci.
+          </li>
+          <li>Aliquam lacinia tempor nibh.</li>
+          <li>Aliquam dictum dignissim dolor a venenatis.</li>
+        </ul>
+
         <p>
           Donec ornare velit ut volutpat blandit. Cras sit amet euismod erat,
-          vitae congue justo. Sed auctor sagittis urna at mattis. Aliquam{" "}
+          vitae congue justo. Sed auctor sagittis urna at mattis. Aliquam
         </p>
         <b>
           <p>Best,</p>

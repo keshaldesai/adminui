@@ -93,3 +93,14 @@ $borders: darken($menus, 10%);
   border-width: 2px 2px 2px 1px;
   border-radius: 0px 20px 20px 0px;
 }
+
+.attach-size {
+  color: lighten(#839497, 25%);
+}
+
+.attach-download {
+  margin-left: auto;
+  color: #00a388;
+  font-weight: bolder;
+  cursor: pointer;
+}

@@ -5,7 +5,7 @@ const ButtonGroup = ({ icons, active, group }) => {
   return (
     <span className={`button-group ${group}`}>
       {icons.map(icon => {
-        return <SingleButton icon={icon} />;
+        return <SingleButton icon={icon} key={icon} />;
       })}
     </span>
   );
