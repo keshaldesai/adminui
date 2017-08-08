@@ -2,7 +2,11 @@ import React, { Component } from "react";
 
 class Reply extends Component {
   render() {
-    return <div className="mb-group mail-reply">Reply</div>;
+    return (
+      <div className="mb-block mail-reply">
+        <div className="reply-box">Click here to reply</div>
+      </div>
+    );
   }
 }
 
