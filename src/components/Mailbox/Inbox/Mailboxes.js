@@ -21,7 +21,9 @@ class Mailboxes extends Component {
     return (
       <div className="inbox-mailboxes">
         <MailboxGroup title="MAILBOXES" items={mbArr} />
+        <div className="group-spacer" />
         <MailboxGroup title="OTHERS" items={otherArr} />
+        <div className="group-spacer" />
         <MailboxGroup title="TAGS" items={tagsArr} />
       </div>
     );

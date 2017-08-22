@@ -26,8 +26,12 @@
 }
 
 .in-group-item {
-  font-size: 15px;
+  font-size: 14px;
+  color: #000000;
   padding: 16px 32px;
+  &:hover {
+    background-color: rgb(244, 241, 241);
+  }
 }
 
 .box-title {
@@ -45,4 +49,9 @@
 
 .group-tags > div:nth-child(3) > i {
   color: rgb(231, 76, 60);
+}
+
+.group-spacer {
+  margin: 0px 16px;
+  border-bottom: 1px solid #efefef;
 }
