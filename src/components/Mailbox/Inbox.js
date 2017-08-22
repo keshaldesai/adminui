@@ -1,11 +1,12 @@
 import React, { Component } from "react";
+import Actions from "./Inbox/Actions";
 
 class Inbox extends Component {
   render() {
     return (
       <div className="main inbox">
-        <div className="mb-block mail-actions">Actions</div>
-        <div className="inbox-container flex-row">
+        <Actions />
+        <div className="inbox-container">
           <div className="mb-block inbox-mailboxes">Mailboxes</div>
           <div className="mb-block inbox-items">Items</div>
         </div>

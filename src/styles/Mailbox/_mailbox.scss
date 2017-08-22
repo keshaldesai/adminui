@@ -18,7 +18,7 @@ $borders: darken($menus, 10%);
   border-radius: 20px;
   border: 2px solid $borders;
   padding: 2px 12px;
-  margin-right: 8px;
+  margin-right: 16px;
   cursor: pointer;
   transition: all 200ms;
   font-size: 18px;
@@ -47,7 +47,7 @@ $borders: darken($menus, 10%);
 }
 
 .button-group {
-  margin-right: 8px;
+  margin-right: 16px;
   cursor: pointer;
   transition: all 200ms;
   .mb-button {

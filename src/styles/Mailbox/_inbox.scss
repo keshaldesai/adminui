@@ -1,1 +1,18 @@
+.inbox {
+  display: flex;
+  flex-direction: column;
+}
 
+.inbox-container {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.inbox-mailboxes {
+  width: 100%;
+  max-width: 250px;
+}
+
+.inbox-items {
+  border-left: 1px solid #efefef;
+}
