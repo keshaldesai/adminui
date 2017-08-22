@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import Actions from "./Inbox/Actions";
+import Mailboxes from "./Inbox/Mailboxes";
+import MailboxItems from "./Inbox/MailboxItems";
 
 class Inbox extends Component {
   render() {
@@ -7,8 +9,8 @@ class Inbox extends Component {
       <div className="main inbox">
         <Actions />
         <div className="inbox-container">
-          <div className="mb-block inbox-mailboxes">Mailboxes</div>
-          <div className="mb-block inbox-items">Items</div>
+          <Mailboxes />
+          <MailboxItems />
         </div>
       </div>
     );

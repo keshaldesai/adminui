@@ -11,8 +11,38 @@
 .inbox-mailboxes {
   width: 100%;
   max-width: 250px;
+  padding: 8px 0px;
 }
 
 .inbox-items {
   border-left: 1px solid #efefef;
+}
+
+.in-group-title {
+  font-size: 10px;
+  font-weight: bolder;
+  letter-spacing: 1px;
+  padding: 8px 32px;
+}
+
+.in-group-item {
+  font-size: 15px;
+  padding: 16px 32px;
+}
+
+.box-title {
+  padding: 0px 16px;
+}
+
+.group-mailboxes > div:nth-child(2) {
+  background-color: #3498db;
+  color: white;
+}
+
+.group-tags > div:nth-child(2) > i {
+  color: #00a388;
+}
+
+.group-tags > div:nth-child(3) > i {
+  color: rgb(231, 76, 60);
 }
