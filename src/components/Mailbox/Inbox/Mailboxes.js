@@ -19,11 +19,11 @@ class Mailboxes extends Component {
       { icon: "circle", title: "#anothertag" }
     ];
     return (
-      <div className="inbox-mailboxes">
+      <div className="in-mailboxes">
         <MailboxGroup title="MAILBOXES" items={mbArr} />
-        <div className="group-spacer" />
+        <div className="in-spacer" />
         <MailboxGroup title="OTHERS" items={otherArr} />
-        <div className="group-spacer" />
+        <div className="in-spacer" />
         <MailboxGroup title="TAGS" items={tagsArr} />
       </div>
     );

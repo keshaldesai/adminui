@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Actions from "./Inbox/Actions";
 import Mailboxes from "./Inbox/Mailboxes";
-import MailboxItems from "./Inbox/MailboxItems";
+import Emails from "./Inbox/Emails";
 
 class Inbox extends Component {
   render() {
@@ -10,7 +10,7 @@ class Inbox extends Component {
         <Actions />
         <div className="inbox-container">
           <Mailboxes />
-          <MailboxItems users={this.props.users} />
+          <Emails users={this.props.users} />
         </div>
       </div>
     );

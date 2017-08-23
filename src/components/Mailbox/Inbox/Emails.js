@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import MailboxItem from "./MailboxItem";
+import SingleEmail from "./SingleEmail";
 
-class MailboxItems extends Component {
+class Emails extends Component {
   render() {
     const { users } = this.props;
     if (!users) {
@@ -9,13 +9,13 @@ class MailboxItems extends Component {
     }
     const emailUsers = users.slice(1, 11);
     return (
-      <div className="inbox-items">
+      <div className="inbox-emails">
         {emailUsers.map(user => {
-          return <MailboxItem user={user} />;
+          return <SingleEmail user={user} key={user.name} />;
         })}
       </div>
     );
   }
 }
 
-export default MailboxItems;
+export default Emails;

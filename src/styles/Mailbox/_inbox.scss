@@ -9,7 +9,7 @@
   grid-template-columns: 300px 1fr;
 }
 
-.inbox-mailboxes {
+.in-mailboxes {
   padding: 8px 0px;
 }
 
@@ -19,12 +19,11 @@
 
 .in-group-title {
   font-size: 10px;
-  font-weight: bolder;
   letter-spacing: 1px;
   padding: 8px 32px;
 }
 
-.in-group-item {
+.in-item {
   color: #000000;
   padding: 16px 32px;
   &:hover {
@@ -32,12 +31,12 @@
   }
 }
 
-.group-item-icon {
+.in-item-icon {
   min-width: 15px;
   text-align: center;
 }
 
-.box-title {
+.in-item-title {
   padding: 0px 16px;
 }
 
@@ -54,12 +53,12 @@
   color: rgb(231, 76, 60);
 }
 
-.group-spacer {
+.in-spacer {
   margin: 0px 16px;
   border-bottom: 1px solid #efefef;
 }
 
-.group-notif {
+.in-notif {
   margin-left: auto;
   font-size: 12px;
   font-weight: bolder;
@@ -67,25 +66,25 @@
   padding: 1px 6px;
 }
 
-.group-mailboxes .group-notif {
+.group-mailboxes .in-notif {
   background-color: #ffffff;
   color: #3498db;
 }
 
-.group-others .group-notif {
+.group-others .in-notif {
   background-color: rgb(231, 76, 60);
   color: #ffffff;
 }
 
-.inbox-items {
+.inbox-emails {
   padding: 16px 0px;
 }
 
-.inbox-item {
+.email {
   padding: 8px 32px;
   border-bottom: 1px solid #efefef;
 }
 
-.in-item-date {
+.email-date {
   margin-left: auto;
 }
