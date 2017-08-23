@@ -10,12 +10,19 @@ class MailboxGroup extends Component {
           {title}
         </div>
         {items.map(item => {
-          return (
-            <div className={`in-group-item flex-row`} key={item.title}>
-              <i className={`fa fa-${item.icon}`} aria-hidden="true" />
-              <span className="box-title">
-                {item.title}
+          const { title, icon, notifs } = item;
+          const notif = notifs
+            ? <span className="group-notif">
+                {notifs}
               </span>
+            : "";
+          return (
+            <div className={`in-group-item flex-row`} key={title}>
+              <i className={`fa fa-${icon}`} aria-hidden="true" />
+              <span className="box-title">
+                {title}
+              </span>
+              {notif}
             </div>
           );
         })}

@@ -10,7 +10,7 @@
 
 .inbox-mailboxes {
   width: 100%;
-  max-width: 250px;
+  max-width: 300px;
   padding: 8px 0px;
 }
 
@@ -40,7 +40,7 @@
 
 .group-mailboxes > div:nth-child(2) {
   background-color: #3498db;
-  color: white;
+  color: #ffffff;
 }
 
 .group-tags > div:nth-child(2) > i {
@@ -54,4 +54,21 @@
 .group-spacer {
   margin: 0px 16px;
   border-bottom: 1px solid #efefef;
+}
+
+.group-notif {
+  margin-left: auto;
+  font-size: 12px;
+  border-radius: 4px;
+  padding: 1px 6px;
+}
+
+.group-mailboxes .group-notif {
+  background-color: #ffffff;
+  color: #3498db;
+}
+
+.group-others .group-notif {
+  background-color: rgb(231, 76, 60);
+  color: #ffffff;
 }

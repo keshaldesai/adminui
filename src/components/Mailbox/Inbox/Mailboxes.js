@@ -4,14 +4,14 @@ import MailboxGroup from "./MailboxGroup";
 class Mailboxes extends Component {
   render() {
     const mbArr = [
-      { icon: "envelope-o", title: "Inbox" },
+      { icon: "envelope-o", title: "Inbox", notifs: 38 },
       { icon: "star-o", title: "Starred" },
       { icon: "paper-plane-o", title: "Sent" },
       { icon: "inbox", title: "Drafts" },
       { icon: "paperclip", title: "Attachments" }
     ];
     const otherArr = [
-      { icon: "exclamation", title: "Spam" },
+      { icon: "exclamation", title: "Spam", notifs: 4 },
       { icon: "trash-o", title: "Trash" }
     ];
     const tagsArr = [
