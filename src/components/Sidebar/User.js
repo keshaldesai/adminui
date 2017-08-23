@@ -1,10 +1,11 @@
 import React from "react";
+import UserIcon from "../Shared/UserIcon";
 
 function User({ user }) {
   const { name, picture } = user;
   return (
     <div className="user">
-      <img src={picture} alt="user icon" />
+      <UserIcon picture={picture} color="#bdd4de" width="40px" />
       <div className="user-name">
         {name}
       </div>

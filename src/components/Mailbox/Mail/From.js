@@ -1,13 +1,15 @@
 import React, { Component } from "react";
+import UserIcon from "../../Shared/UserIcon";
 
 class From extends Component {
   render() {
     return (
       <div className="mb-block mail-from flex-row">
         <div className="from-user flex-row">
-          <img
-            src="https://randomuser.me/api/portraits/thumb/men/72.jpg"
-            alt="user"
+          <UserIcon
+            picture="https://randomuser.me/api/portraits/thumb/men/72.jpg"
+            color="#bdd4de"
+            width="40px"
           />
           <div className="from-info">
             <div className="from-email">

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import DropItem from "./DropItem";
+import UserIcon from "../Shared/UserIcon";
 
 class Notifications extends Component {
   render() {
@@ -28,9 +29,10 @@ class Notifications extends Component {
         <div className="drop-title">YOUR NOTIFICATIONS</div>
         <div className="notif-group">
           <DropItem item={notifArr[0]}>
-            <img
-              src="https://randomuser.me/api/portraits/thumb/men/24.jpg"
-              alt="thumbnail"
+            <UserIcon
+              picture="https://randomuser.me/api/portraits/thumb/men/24.jpg"
+              color="#FFFFFF"
+              width="35px"
             />
             <div
               className="notif-status"
@@ -40,9 +42,10 @@ class Notifications extends Component {
             </div>
           </DropItem>
           <DropItem item={notifArr[1]}>
-            <img
-              src="https://randomuser.me/api/portraits/thumb/women/80.jpg"
-              alt="thumbnail"
+            <UserIcon
+              picture="https://randomuser.me/api/portraits/thumb/women/80.jpg"
+              color="#FFFFFF"
+              width="35px"
             />
           </DropItem>
           <DropItem item={notifArr[2]}>

@@ -9,13 +9,13 @@ const SocialTab = ({ users }) => {
   return (
     <div className="tab tab-social">
       <div className="tab-title">ONLINE (4)</div>
-      <SocialGroup type="online" users={online} />
+      <SocialGroup type="online" users={online} color="#468966" />
       <div className="tab-title">IDLE (3)</div>
-      <SocialGroup type="idle" users={idle} />
+      <SocialGroup type="idle" users={idle} color="#ffb03b" />
       <div className="tab-title">BUSY (4)</div>
-      <SocialGroup type="busy" users={busy} />
+      <SocialGroup type="busy" users={busy} color="#8e001c" />
       <div className="tab-title">OFFLINE (3)</div>
-      <SocialGroup type="offline" users={offline} />
+      <SocialGroup type="offline" users={offline} color="#d1dbbd" />
     </div>
   );
 };

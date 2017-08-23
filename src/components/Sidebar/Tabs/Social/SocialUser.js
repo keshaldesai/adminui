@@ -1,9 +1,10 @@
 import React from "react";
+import UserIcon from "../../../Shared/UserIcon";
 
-const SocialUser = ({ name, picture }) => {
+const SocialUser = ({ name, picture, color }) => {
   return (
     <div className="social-user flex-row">
-      <img src={picture} alt="thumbnail" />
+      <UserIcon picture={picture} color={color} width="30px" />
       <div className="social-name">
         {name}
       </div>

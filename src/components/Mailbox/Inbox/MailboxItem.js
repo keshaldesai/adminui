@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import UserIcon from "../../Shared/UserIcon";
 
 class MailboxItem extends Component {
   render() {
@@ -6,7 +7,7 @@ class MailboxItem extends Component {
     return (
       <div className="inbox-item flex-row">
         <div className="in-item-pic">
-          <img src={picture} alt="thumbnail" />
+          <UserIcon picture={picture} color="#ffb03b" width="40px" />
         </div>
         <div className="in-item-main">
           {name}

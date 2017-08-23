@@ -11,28 +11,7 @@
 
 .social-user {
   padding: 4px 24px;
-  img {
-    width: 30px;
-    border-radius: 50%;
-    border: 3px solid;
-  }
   .social-name {
     padding-left: 8px;
   }
-}
-
-.social-online img {
-  border-color: #468966;
-}
-
-.social-idle img {
-  border-color: #ffb03b;
-}
-
-.social-busy img {
-  border-color: #8e001c;
-}
-
-.social-offline img {
-  border-color: #d1dbbd;
 }
