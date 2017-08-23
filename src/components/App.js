@@ -10,13 +10,40 @@ import Social from "./Social/Social";
 import Post from "./Blog/Post";
 import Posts from "./Blog/Posts";
 import Header from "./Header/Header";
+import axios from "axios";
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      users: null
+    };
+  }
+
+  componentWillMount() {
+    axios
+      .get("https://randomuser.me/api/?inc=name,picture&results=15&nat=us")
+      .then(response => {
+        const { results } = response.data;
+        const users = results.map(user => {
+          const name = `${capitalize(user.name.first)} ${capitalize(
+            user.name.last
+          )}`;
+          return { name, picture: user.picture.thumbnail };
+        });
+        this.setState({ users });
+      });
+  }
+
   render() {
     return (
       <Router>
         <div className="app">
-          <Route path="*" component={Sidebar} />
+          <Route
+            exact
+            path="*"
+            render={props => <Sidebar {...props} users={this.state.users} />}
+          />
           <div className="page">
             <Header />
             <div className="content">
@@ -34,6 +61,10 @@ class App extends Component {
       </Router>
     );
   }
+}
+
+function capitalize(name) {
+  return name.charAt(0).toUpperCase() + name.slice(1);
 }
 
 export default App;

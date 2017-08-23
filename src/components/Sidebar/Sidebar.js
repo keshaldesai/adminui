@@ -6,7 +6,6 @@ import SocialTab from "./Tabs/Social/SocialTab";
 import StatisticsTab from "./Tabs/Statistics/StatisticsTab";
 import HistoryTab from "./Tabs/History/HistoryTab";
 import AlertTab from "./Tabs/Alert/AlertTab";
-import axios from "axios";
 import { CSSTransitionGroup } from "react-transition-group";
 
 class Sidebar extends Component {
@@ -14,24 +13,8 @@ class Sidebar extends Component {
     super(props);
     this.handleClick = this.handleClick.bind(this);
     this.state = {
-      activeTab: 0,
-      users: null
+      activeTab: 0
     };
-  }
-
-  componentWillMount() {
-    axios
-      .get("https://randomuser.me/api/?inc=name,picture&results=15&nat=us")
-      .then(response => {
-        const { results } = response.data;
-        const users = results.map(user => {
-          const name = `${capitalize(user.name.first)} ${capitalize(
-            user.name.last
-          )}`;
-          return { name, picture: user.picture.thumbnail };
-        });
-        this.setState({ users });
-      });
   }
 
   handleClick(index) {
@@ -39,8 +22,8 @@ class Sidebar extends Component {
   }
 
   renderTab() {
-    const { activeTab, users } = this.state;
-    const { match } = this.props;
+    const { activeTab } = this.state;
+    const { match, users } = this.props;
     if (!users || users.length !== 15) {
       return;
     }
@@ -81,7 +64,8 @@ class Sidebar extends Component {
   }
 
   render() {
-    const { activeTab, users } = this.state;
+    const { activeTab } = this.state;
+    const { users } = this.props;
     const user = users
       ? users[0]
       : {
@@ -102,10 +86,6 @@ class Sidebar extends Component {
       </div>
     );
   }
-}
-
-function capitalize(name) {
-  return name.charAt(0).toUpperCase() + name.slice(1);
 }
 
 export default Sidebar;
