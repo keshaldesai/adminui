@@ -32,6 +32,11 @@
   }
 }
 
+.group-item-icon {
+  min-width: 15px;
+  text-align: center;
+}
+
 .box-title {
   padding: 0px 16px;
 }
@@ -41,11 +46,11 @@
   color: #ffffff;
 }
 
-.group-tags > div:nth-child(2) > i {
+.group-tags > div:nth-child(2) > div {
   color: #00a388;
 }
 
-.group-tags > div:nth-child(3) > i {
+.group-tags > div:nth-child(3) > div {
   color: rgb(231, 76, 60);
 }
 

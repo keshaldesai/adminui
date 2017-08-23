@@ -18,7 +18,9 @@ class MailboxGroup extends Component {
             : "";
           return (
             <div className={`in-group-item flex-row`} key={title}>
-              <i className={`fa fa-${icon}`} aria-hidden="true" />
+              <div className="group-item-icon">
+                <i className={`fa fa-${icon}`} aria-hidden="true" />
+              </div>
               <span className="box-title">
                 {title}
               </span>
