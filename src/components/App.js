@@ -36,19 +36,24 @@ class App extends Component {
   }
 
   render() {
+    const { users } = this.state;
     return (
       <Router>
         <div className="app">
           <Route
             exact
             path="*"
-            render={props => <Sidebar {...props} users={this.state.users} />}
+            render={props => <Sidebar {...props} users={users} />}
           />
           <div className="page">
             <Header />
             <div className="content">
               <Route path="/dashboard" component={Dashboard} />
-              <Route path="/mailbox/inbox" component={Inbox} />
+              <Route
+                exact
+                path="/mailbox/inbox"
+                render={props => <Inbox {...props} users={users} />}
+              />
               <Route path="/mailbox/compose" component={Compose} />
               <Route path="/mailbox/mail" component={Mail} />
               <Route path="/gallery" component={Gallery} />

@@ -10,7 +10,7 @@ class Inbox extends Component {
         <Actions />
         <div className="inbox-container">
           <Mailboxes />
-          <MailboxItems />
+          <MailboxItems users={this.props.users} />
         </div>
       </div>
     );

@@ -1,16 +1,15 @@
 .inbox {
   display: flex;
   flex-direction: column;
+  font-size: 14px;
 }
 
 .inbox-container {
-  display: flex;
-  flex-flow: row wrap;
+  display: grid;
+  grid-template-columns: 300px 1fr;
 }
 
 .inbox-mailboxes {
-  width: 100%;
-  max-width: 300px;
   padding: 8px 0px;
 }
 
@@ -26,7 +25,6 @@
 }
 
 .in-group-item {
-  font-size: 14px;
   color: #000000;
   padding: 16px 32px;
   &:hover {
@@ -72,4 +70,17 @@
 .group-others .group-notif {
   background-color: rgb(231, 76, 60);
   color: #ffffff;
+}
+
+.inbox-items {
+  padding: 16px 0px;
+}
+
+.inbox-item {
+  padding: 8px 32px;
+  border-bottom: 1px solid #efefef;
+}
+
+.in-item-date {
+  margin-left: auto;
 }
