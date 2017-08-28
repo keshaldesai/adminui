@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import DropItem from "./DropItem";
 import UserIcon from "../Shared/UserIcon";
+import Label from "../Shared/Label";
 
 class Notifications extends Component {
   render() {
@@ -34,12 +35,7 @@ class Notifications extends Component {
               color="#FFFFFF"
               width="35px"
             />
-            <div
-              className="notif-status"
-              style={{ backgroundColor: "#3498DB" }}
-            >
-              NEW
-            </div>
+            <Label color="#3498DB">NEW</Label>
           </DropItem>
           <DropItem item={notifArr[1]}>
             <UserIcon
@@ -50,12 +46,7 @@ class Notifications extends Component {
           </DropItem>
           <DropItem item={notifArr[2]}>
             <i className="fa fa-github fa-3x" aria-hidden="true" />
-            <div
-              className="notif-status"
-              style={{ backgroundColor: "#E74C3C" }}
-            >
-              ALERT
-            </div>
+            <Label color="#E74C3C">ALERT</Label>
           </DropItem>
         </div>
         <div className="notif-buttons">
