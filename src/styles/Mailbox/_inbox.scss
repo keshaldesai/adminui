@@ -11,10 +11,7 @@
 
 .in-mailboxes {
   padding: 8px 0px;
-}
-
-.inbox-items {
-  border-left: 1px solid #efefef;
+  border-right: 1px solid #efefef;
 }
 
 .in-group-title {
@@ -76,15 +73,21 @@
   color: #ffffff;
 }
 
-.inbox-emails {
-  padding: 16px 0px;
-}
-
 .email {
-  padding: 8px 32px;
+  padding: 16px 32px;
   border-bottom: 1px solid #efefef;
 }
 
-.email-date {
+.email-main {
+  padding: 0px 8px;
+}
+
+.email-name {
+  color: #000000;
+}
+
+.email-extra {
   margin-left: auto;
+  text-align: right;
+  min-width: 60px;
 }
