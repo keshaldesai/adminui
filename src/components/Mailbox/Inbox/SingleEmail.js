@@ -39,9 +39,11 @@ class MailboxItem extends Component {
           <div className="email-name">
             {name}
           </div>
-          <div className="email-meta">
-            <Label color={colors[index]} />
-            {content[index]}
+          <div className="email-meta flex-row">
+            <Label color={colors[index]}>LABEL</Label>
+            <span className="email-content">
+              {content[index]}
+            </span>
           </div>
         </div>
         <div className="email-extra">

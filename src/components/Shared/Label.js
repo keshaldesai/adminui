@@ -1,13 +1,13 @@
 import React from "react";
 
-const Label = ({ color, circle }) => {
+const Label = ({ color, circle, children }) => {
   const radius = circle ? "20px" : "4px";
   return (
     <span
       className="sh-label"
       style={{ backgroundColor: color, borderRadius: radius }}
     >
-      Label
+      {children}
     </span>
   );
 };

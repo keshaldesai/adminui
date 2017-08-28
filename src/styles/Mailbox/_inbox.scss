@@ -55,20 +55,16 @@
   border-bottom: 1px solid #efefef;
 }
 
-.in-notif {
+.in-item .sh-label {
   margin-left: auto;
-  font-size: 12px;
-  font-weight: bolder;
-  border-radius: 4px;
-  padding: 1px 6px;
 }
 
-.group-mailboxes .in-notif {
+.group-mailboxes .sh-label {
   background-color: #ffffff;
   color: #3498db;
 }
 
-.group-others .in-notif {
+.group-others .sh-label {
   background-color: rgb(231, 76, 60);
   color: #ffffff;
 }
@@ -90,4 +86,8 @@
   margin-left: auto;
   text-align: right;
   min-width: 60px;
+}
+
+.email-content {
+  margin: 0px 8px;
 }

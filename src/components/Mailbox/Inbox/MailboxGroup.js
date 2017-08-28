@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Label from "../../Shared/Label";
 
 class MailboxGroup extends Component {
   render() {
@@ -12,9 +13,9 @@ class MailboxGroup extends Component {
         {items.map(item => {
           const { title, icon, notifs } = item;
           const notif = notifs
-            ? <span className="in-notif">
+            ? <Label>
                 {notifs}
-              </span>
+              </Label>
             : "";
           return (
             <div className={`in-item flex-row`} key={title}>
