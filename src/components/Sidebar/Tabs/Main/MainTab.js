@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 class MainTab extends Component {
   renderTabItems(arr, activePage) {
     return arr.map((tab, index) => {
-      const { url, icon, title, children } = tab;
+      const { url, icon, title, children, notifs } = tab;
       if (children) {
         let regex;
         if (url === "/mailbox") {
@@ -21,6 +21,7 @@ class MainTab extends Component {
             icon={icon}
             title={title}
             active={regex.test(activePage)}
+            notifs={notifs}
           >
             {this.renderTabItems(children, activePage)}
           </TabParent>
@@ -46,7 +47,8 @@ class MainTab extends Component {
           { icon: "inbox", title: "Inbox", url: "/mailbox/inbox" },
           { icon: "envelope-open-o", title: "Mail", url: "/mailbox/mail" },
           { icon: "pencil-square-o", title: "Compose", url: "/mailbox/compose" }
-        ]
+        ],
+        notifs: 4
       },
       { icon: "picture-o", title: "Gallery", url: "/gallery" },
       { icon: "share-alt", title: "Social", url: "/social" },
@@ -57,7 +59,8 @@ class MainTab extends Component {
         children: [
           { icon: "server", title: "Posts", url: "/blog/posts" },
           { icon: "file-text-o", title: "Single Post", url: "/blog/post" }
-        ]
+        ],
+        notifs: 2
       }
     ];
     return (

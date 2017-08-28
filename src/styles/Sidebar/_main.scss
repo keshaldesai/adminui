@@ -30,6 +30,13 @@ $accent: #ff530d;
   transition: max-height 200ms ease-out;
 }
 
+.tab-item-extra {
+  margin-left: auto;
+  .sh-label {
+    margin-right: 16px;
+  }
+}
+
 .tab-item-active {
   .tab-item-header {
     padding-left: 18px;
@@ -38,7 +45,6 @@ $accent: #ff530d;
 
 .tab-item-open {
   transition: all 200ms;
-  margin-left: auto;
   i {
     padding: 0;
   }

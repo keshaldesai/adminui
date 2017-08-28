@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Label from "../../../Shared/Label";
 
 class TabParent extends Component {
   constructor(props) {
@@ -16,7 +17,7 @@ class TabParent extends Component {
   }
 
   render() {
-    const { children, title, icon, active } = this.props;
+    const { children, title, icon, active, notifs } = this.props;
     const { show } = this.state;
     const activeClass = active ? " tab-item-active" : "";
     const caretStyle = show
@@ -30,8 +31,13 @@ class TabParent extends Component {
           <div className="tab-item-title">
             {title}
           </div>
-          <div className="tab-item-open" style={caretStyle}>
-            <i className="fa fa-caret-left fa-lg" aria-hidden="true" />
+          <div className="tab-item-extra flex-row">
+            <Label color="#e74c3c">
+              {notifs}
+            </Label>
+            <div className="tab-item-open" style={caretStyle}>
+              <i className="fa fa-caret-left fa-lg" aria-hidden="true" />
+            </div>
           </div>
         </div>
         <div className="tab-item-children" style={childStyle}>
