@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Actions from "./Compose/Actions";
 import Form from "./Compose/Form";
-import Editor from "./Compose/Editor";
+import CompEditor from "./Compose/CompEditor";
 import Options from "./Compose/Options";
 
 class Compose extends Component {
@@ -10,7 +10,7 @@ class Compose extends Component {
       <div className="main compose">
         <Actions />
         <Form />
-        <Editor />
+        <CompEditor />
         <Options />
       </div>
     );
