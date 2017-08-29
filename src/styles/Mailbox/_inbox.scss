@@ -72,6 +72,10 @@
 .email {
   padding: 16px 32px;
   border-bottom: 1px solid #efefef;
+  &:hover {
+    background-color: lightyellow;
+    cursor: pointer;
+  }
 }
 
 .email-main {
