@@ -10,8 +10,8 @@ class Actions extends Component {
       <div className="mb-block mail-actions">
         <SingleButton icon="arrow-left" />
         <SingleButton icon="pencil-square-o" />
-        <ButtonGroup icons={mailIcons} group="mb-group-mail" />
-        <ButtonGroup icons={actionIcons} group="mb-group-actions" />
+        <ButtonGroup icons={mailIcons} />
+        <ButtonGroup icons={actionIcons} />
         <SingleButton icon="print" />
       </div>
     );
