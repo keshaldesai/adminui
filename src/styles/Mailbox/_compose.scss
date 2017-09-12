@@ -1,3 +1,15 @@
 .comp-form {
   padding: 24px 40px;
 }
+
+div.ql-container.ql-snow,
+div.ql-toolbar.ql-snow {
+  border: 1px solid #efefef;
+  border-left: none;
+  border-right: none;
+}
+
+.ql-editor p {
+  color: #000000;
+  font-size: 14px;
+}
