@@ -29,3 +29,32 @@
   text-align: right;
   font-weight: bolder;
 }
+
+.comp-options {
+  text-align: right;
+  padding: 24px 40px;
+  .mb-button {
+    font-size: 12px;
+    letter-spacing: 1px;
+    padding: 4px 16px;
+    font-weight: bolder;
+  }
+}
+
+.button-disc:hover {
+  background-color: #e74c3c;
+  color: #ffffff;
+  border-color: #e74c3c;
+}
+
+.button-save:hover {
+  background-color: #00a388;
+  color: #ffffff;
+  border-color: #00a388;
+}
+
+.button-send:hover {
+  background-color: #3498db;
+  color: #ffffff;
+  border-color: #3498db;
+}
