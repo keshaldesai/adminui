@@ -3,6 +3,7 @@
 @import "./Header/_header.scss";
 @import "./Mailbox/_mailbox.scss";
 @import "./Shared/_shared.scss";
+@import "./Gallery/_gallery.scss";
 
 $font: #839497;
 $bg: #efefef;
@@ -13,7 +14,7 @@ body {
   font-family: sans-serif;
   color: $font;
   background-color: $bg;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   user-select: none;
   cursor: default;
 }

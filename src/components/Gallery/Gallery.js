@@ -1,8 +1,13 @@
 import React, { Component } from "react";
+import CardGroup from "./CardGroup";
 
 class Gallery extends Component {
   render() {
-    return <div className="main gallery">Gallery</div>;
+    return (
+      <div className="gallery">
+        <CardGroup />
+      </div>
+    );
   }
 }
 
