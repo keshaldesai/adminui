@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import Actions from "./Mail/Actions";
-import Attachments from "./Mail/Attachments";
-import Contents from "./Mail/Contents";
-import From from "./Mail/From";
-import Reply from "./Mail/Reply";
+import Actions from "./Actions";
+import Attachments from "./Attachments";
+import Contents from "./Contents";
+import From from "./From";
+import Reply from "./Reply";
 
 class Mail extends Component {
   render() {

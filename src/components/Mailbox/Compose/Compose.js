@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import Actions from "./Compose/Actions";
-import Form from "./Compose/Form";
-import CompEditor from "./Compose/CompEditor";
-import Options from "./Compose/Options";
+import Actions from "./Actions";
+import Form from "./Form";
+import CompEditor from "./CompEditor";
+import Options from "./Options";
 
 class Compose extends Component {
   render() {

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import Actions from "./Inbox/Actions";
-import Mailboxes from "./Inbox/Mailboxes";
-import Emails from "./Inbox/Emails";
+import Actions from "./Actions";
+import Mailboxes from "./Mailboxes";
+import Emails from "./Emails";
 
 class Inbox extends Component {
   render() {

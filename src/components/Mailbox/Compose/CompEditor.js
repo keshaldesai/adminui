@@ -4,7 +4,7 @@ import ReactQuill from "react-quill";
 class CompEditor extends Component {
   constructor(props) {
     super(props);
-    this.state = { text: "" }; // You can also pass a Quill Delta here
+    this.state = { text: "" };
     this.handleChange = this.handleChange.bind(this);
   }
 
