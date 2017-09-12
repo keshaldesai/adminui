@@ -1,32 +1,19 @@
 import React, { Component } from "react";
-import { Editor, EditorState, RichUtils } from "draft-js";
+import ReactQuill from "react-quill";
 
 class CompEditor extends Component {
   constructor(props) {
     super(props);
-    this.state = { editorState: EditorState.createEmpty() };
-    this.onChange = editorState => this.setState({ editorState });
-    this.handleKeyCommand = this.handleKeyCommand.bind(this);
+    this.state = { text: "" }; // You can also pass a Quill Delta here
+    this.handleChange = this.handleChange.bind(this);
   }
-  handleKeyCommand(command) {
-    const newState = RichUtils.handleKeyCommand(
-      this.state.editorState,
-      command
-    );
-    if (newState) {
-      this.onChange(newState);
-      return "handled";
-    }
-    return "not-handled";
+
+  handleChange(value) {
+    this.setState({ text: value });
   }
+
   render() {
-    return (
-      <Editor
-        editorState={this.state.editorState}
-        handleKeyCommand={this.handleKeyCommand}
-        onChange={this.onChange}
-      />
-    );
+    return <ReactQuill value={this.state.text} onChange={this.handleChange} />;
   }
 }
 
