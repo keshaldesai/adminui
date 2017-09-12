@@ -2,8 +2,8 @@
   padding: 24px 40px;
 }
 
-div.ql-container.ql-snow,
-div.ql-toolbar.ql-snow {
+.ql-container.ql-snow,
+.ql-toolbar.ql-snow {
   border: 1px solid #efefef;
   border-left: none;
   border-right: none;
@@ -12,4 +12,20 @@ div.ql-toolbar.ql-snow {
 .ql-editor p {
   color: #000000;
   font-size: 14px;
+}
+
+.comp-form {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  grid-row-gap: 16px;
+  grid-column-gap: 16px;
+  align-items: center;
+  input {
+    padding: 6px 6px;
+  }
+}
+
+.comp-header {
+  text-align: right;
+  font-weight: bolder;
 }
