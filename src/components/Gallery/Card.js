@@ -24,7 +24,7 @@ class Card extends Component {
     return (
       <div className="card">
         <div className="card-img-cont" onClick={this.handleMagnify}>
-          <img alt="cardimage" src={url + "?w=200&h=150&fit=crop"} />
+          <img alt="cardimage" src={url + "?w=260&h=195&fit=crop"} />
           <div className="card-img-over" />
           <div className="card-mag">
             <i className="fa fa-search-plus fa-2x" aria-hidden="true" />

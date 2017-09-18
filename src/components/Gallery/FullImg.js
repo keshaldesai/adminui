@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 
 class FullImg extends Component {
-  this;
   render() {
     return (
       <div className="full-img">
