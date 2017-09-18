@@ -6,7 +6,7 @@ class FullImg extends Component {
     return (
       <div className="full-img">
         <div className="full-img-cont">
-          <img src={this.props.url} />
+          <img src={this.props.url} alt="fullimage" />
         </div>
         <div className="full-img-close" onClick={this.props.handleMagnify}>
           <i className="fa fa-times fa-2x" aria-hidden="true" />
