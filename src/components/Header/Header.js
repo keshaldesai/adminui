@@ -8,7 +8,9 @@ class Header extends Component {
   render() {
     return (
       <div className="header flex-row">
-        <HeaderItem button="bars" />
+        <span onClick={this.props.handleClick}>
+          <HeaderItem button="bars" />
+        </span>
         <div className="logo flex-row">
           <i className="fa fa-pied-piper fa-2x" aria-hidden="true" />
           <span>My Business</span>

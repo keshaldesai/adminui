@@ -65,15 +65,20 @@ class Sidebar extends Component {
 
   render() {
     const { activeTab } = this.state;
-    const { users } = this.props;
+    const { users, show, handleClose } = this.props;
     const user = users
       ? users[0]
       : {
           name: "John Smith",
           picture: "http://via.placeholder.com/35/5e6d70/ffffff?text=User"
         };
+    const style = show ? { width: "250px" } : {};
+    const exitStyle = show ? { opacity: 1 } : {};
     return (
-      <div className="sidebar">
+      <div className="sidebar" style={style}>
+        <div className="sidebar-close" style={exitStyle} onClick={handleClose}>
+          <i className="fa fa-times-circle fa-lg" aria-hidden="true" />
+        </div>
         <User user={user} />
         <TabMenu activeTab={activeTab} handleClick={this.handleClick} />
         <CSSTransitionGroup

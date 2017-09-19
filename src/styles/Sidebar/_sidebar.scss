@@ -12,6 +12,7 @@ $theme: #ff530d;
   background-color: $bg;
   min-height: 100vh;
   width: 250px;
+  transition: width 200ms;
 }
 
 .user {
@@ -106,4 +107,12 @@ $theme: #ff530d;
 
 .event-item div {
   padding: 6px 0px;
+}
+
+.sidebar-close {
+  opacity: 0;
+  position: fixed;
+  left: 216px;
+  top: 2px;
+  color: white;
 }

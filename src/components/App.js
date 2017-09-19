@@ -12,6 +12,14 @@ import Posts from "./Blog/Posts";
 import Header from "./Header/Header";
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { sidebar: false };
+    this.handleClick = this.handleClick.bind(this);
+  }
+  handleClick() {
+    this.setState({ sidebar: !this.state.sidebar });
+  }
   render() {
     const users = [
       {
@@ -81,10 +89,17 @@ class App extends Component {
           <Route
             exact
             path="*"
-            render={props => <Sidebar {...props} users={users} />}
+            render={props => (
+              <Sidebar
+                {...props}
+                users={users}
+                show={this.state.sidebar}
+                handleClose={this.handleClick}
+              />
+            )}
           />
-          <div className="page">
-            <Header />
+          <div className="page" style={{ translateX: "260px" }}>
+            <Header handleClick={this.handleClick} />
             <div className="content">
               <Route path="/dashboard" component={Dashboard} />
               <Route
