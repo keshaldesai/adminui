@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import UserIcon from "../Shared/UserIcon";
+import FollowButton from "./FollowButton";
 
 class About extends Component {
   render() {
     const { picture, name } = this.props.user;
-    console.log(this.props.user);
     return (
       <div className="soc-about">
         <div className="soc-about-overlay">
@@ -17,7 +17,7 @@ class About extends Component {
             <div className="soc-myname">{name}</div>
             <div className="soc-myjob">Pediatrician, CT</div>
             <div className="soc-follow">
-              <span className="soc-follow-button">FOLLOW ME</span>
+              <FollowButton activeColor="#0000ff" />
             </div>
           </div>
         </div>
