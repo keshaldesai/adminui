@@ -1,4 +1,4 @@
-@import './_drop.scss';
+@import "./_drop.scss";
 
 $font: #839497;
 $bg: #2a2c2b;
@@ -7,6 +7,7 @@ $theme: #ff530d;
 .header {
   background-color: $bg;
   font-size: 20px;
+  width: 100%;
 }
 
 .logo {
@@ -16,6 +17,10 @@ $theme: #ff530d;
 }
 
 .settings {
+  margin-left: auto;
+}
+
+.header-icons {
   margin-left: auto;
 }
 
@@ -46,4 +51,10 @@ $theme: #ff530d;
     transition: background-color 200ms;
     background-color: lighten($theme, 10%);
   }
+}
+
+.button-bars {
+  background-color: rgb(26, 188, 156);
+  color: #ffffff;
+  display: none;
 }

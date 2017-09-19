@@ -8,6 +8,7 @@ class Header extends Component {
   render() {
     return (
       <div className="header flex-row">
+        <HeaderItem button="bars" />
         <div className="logo flex-row">
           <i className="fa fa-pied-piper fa-2x" aria-hidden="true" />
           <span>My Business</span>
@@ -22,8 +23,8 @@ class Header extends Component {
           <HeaderItemDrop button="rss" type="feed">
             <Feed />
           </HeaderItemDrop>
-          <HeaderItem button="power-off" />
         </div>
+        <HeaderItem button="power-off" />
       </div>
     );
   }

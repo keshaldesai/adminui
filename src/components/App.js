@@ -37,6 +37,7 @@ class App extends Component {
 
   render() {
     const { users } = this.state;
+    console.log(users);
     return (
       <Router>
         <div className="app">

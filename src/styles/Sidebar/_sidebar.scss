@@ -11,6 +11,7 @@ $theme: #ff530d;
 .sidebar {
   background-color: $bg;
   min-height: 100vh;
+  width: 250px;
 }
 
 .user {
@@ -39,7 +40,7 @@ $theme: #ff530d;
   cursor: pointer;
   &:hover {
     background-color: darken($theme, 15%);
-    transition: background-color .3s;
+    transition: background-color 0.3s;
   }
 }
 
@@ -48,7 +49,7 @@ $theme: #ff530d;
   color: darken($theme, 10%);
   &:hover {
     background-color: darken($theme, 30%);
-    transition: background-color .3s;
+    transition: background-color 0.3s;
   }
 }
 
@@ -59,10 +60,10 @@ $theme: #ff530d;
 
 .tab-title {
   font-size: 14px;
-  opacity: .5;
+  opacity: 0.5;
   font-weight: bolder;
   padding: 16px 24px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .tab-transition-enter {
