@@ -57,7 +57,11 @@ class App extends Component {
               <Route path="/mailbox/compose" component={Compose} />
               <Route path="/mailbox/mail" component={Mail} />
               <Route path="/gallery" component={Gallery} />
-              <Route path="/social" component={Social} />
+              <Route
+                exact
+                path="/social"
+                render={props => <Social {...props} users={users} />}
+              />
               <Route path="/blog/post" component={Post} />
               <Route path="/blog/posts" component={Posts} />
             </div>

@@ -5,9 +5,14 @@ import SocialItem from "./SocialItem";
 
 class Social extends Component {
   render() {
+    const { users } = this.props;
+    if (!users) {
+      return <div />;
+    }
+    const user = this.props.users[0];
     return (
       <div className="social">
-        <About />
+        <About user={user} />
         <New />
         <SocialItem />
       </div>
