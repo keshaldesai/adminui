@@ -10,34 +10,71 @@ import Social from "./Social/Social";
 import Post from "./Blog/Post";
 import Posts from "./Blog/Posts";
 import Header from "./Header/Header";
-import axios from "axios";
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      users: null
-    };
-  }
-
-  componentWillMount() {
-    axios
-      .get("https://randomuser.me/api/?inc=name,picture&results=15&nat=us")
-      .then(response => {
-        const { results } = response.data;
-        const users = results.map(user => {
-          const name = `${capitalize(user.name.first)} ${capitalize(
-            user.name.last
-          )}`;
-          return { name, picture: user.picture.thumbnail };
-        });
-        this.setState({ users });
-      });
-  }
-
   render() {
-    const { users } = this.state;
-    console.log(users);
+    const users = [
+      {
+        name: "Carolyn Rivera",
+        picture: "https://randomuser.me/api/portraits/thumb/women/24.jpg"
+      },
+      {
+        name: "Sonia Rodriquez",
+        picture: "https://randomuser.me/api/portraits/thumb/women/13.jpg"
+      },
+      {
+        name: "Elsie Terry",
+        picture: "https://randomuser.me/api/portraits/thumb/women/85.jpg"
+      },
+      {
+        name: "Ronald Vargas",
+        picture: "https://randomuser.me/api/portraits/thumb/men/39.jpg"
+      },
+      {
+        name: "Calvin Baker",
+        picture: "https://randomuser.me/api/portraits/thumb/men/43.jpg"
+      },
+      {
+        name: "Monica Snyder",
+        picture: "https://randomuser.me/api/portraits/thumb/women/22.jpg"
+      },
+      {
+        name: "Howard Mills",
+        picture: "https://randomuser.me/api/portraits/thumb/men/28.jpg"
+      },
+      {
+        name: "Liam Duncan",
+        picture: "https://randomuser.me/api/portraits/thumb/men/7.jpg"
+      },
+      {
+        name: "Freddie Lucas",
+        picture: "https://randomuser.me/api/portraits/thumb/men/49.jpg"
+      },
+      {
+        name: "Kevin Jacobs",
+        picture: "https://randomuser.me/api/portraits/thumb/men/16.jpg"
+      },
+      {
+        name: "Sonia Butler",
+        picture: "https://randomuser.me/api/portraits/thumb/women/11.jpg"
+      },
+      {
+        name: "Billie Black",
+        picture: "https://randomuser.me/api/portraits/thumb/women/1.jpg"
+      },
+      {
+        name: "Marsha Stewart",
+        picture: "https://randomuser.me/api/portraits/thumb/women/13.jpg"
+      },
+      {
+        name: "Riley Walker",
+        picture: "https://randomuser.me/api/portraits/thumb/women/83.jpg"
+      },
+      {
+        name: "Armando Gray",
+        picture: "https://randomuser.me/api/portraits/thumb/men/40.jpg"
+      }
+    ];
     return (
       <Router>
         <div className="app">
@@ -71,10 +108,6 @@ class App extends Component {
       </Router>
     );
   }
-}
-
-function capitalize(name) {
-  return name.charAt(0).toUpperCase() + name.slice(1);
 }
 
 export default App;
