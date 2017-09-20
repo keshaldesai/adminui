@@ -1,6 +1,5 @@
 @import "./_main.scss";
 @import "./_social.scss";
-@import "./_statistics.scss";
 @import "./_history.scss";
 @import "./_alert.scss";
 
@@ -107,7 +106,9 @@ $theme: #ff530d;
 }
 
 .sidebar-close {
+  transition: all 300ms;
   opacity: 0;
+  display: none;
   position: fixed;
   left: 216px;
   top: 2px;

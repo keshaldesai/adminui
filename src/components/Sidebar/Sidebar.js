@@ -65,8 +65,8 @@ class Sidebar extends Component {
           name: "John Smith",
           picture: "http://via.placeholder.com/35/5e6d70/ffffff?text=User"
         };
-    const style = show ? { width: "250px" } : {};
-    const exitStyle = show ? { opacity: 1 } : {};
+    const style = show ? { width: "initial" } : {};
+    const exitStyle = show ? { opacity: 1, display: "block" } : {};
     return (
       <div className="sidebar" style={style}>
         <div className="sidebar-close" style={exitStyle} onClick={handleClose}>
