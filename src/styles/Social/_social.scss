@@ -1,5 +1,12 @@
 .social {
   background-color: white;
+  textarea {
+    font-size: 16px;
+    font-family: "Open Sans", sans-serif;
+    width: 100%;
+    border: none;
+    outline: none;
+  }
 }
 
 .soc-about {
@@ -95,22 +102,8 @@
   }
 }
 
-.soc-new {
-  border-radius: 4px;
-  border: 2px solid #efefef;
-  margin: 24px;
-}
-
 .soc-area {
   margin: 8px 24px;
-  textarea {
-    font-size: 16px;
-    font-family: "Open Sans", sans-serif;
-    width: 100%;
-    min-height: 140px;
-    border: none;
-    outline: none;
-  }
 }
 
 .soc-options {

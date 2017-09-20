@@ -65,7 +65,7 @@ class Sidebar extends Component {
           name: "John Smith",
           picture: "http://via.placeholder.com/35/5e6d70/ffffff?text=User"
         };
-    const style = show ? { width: "initial" } : {};
+    const style = show ? { width: "100%" } : {};
     const exitStyle = show ? { opacity: 1, display: "block" } : {};
     return (
       <div className="sidebar" style={style}>

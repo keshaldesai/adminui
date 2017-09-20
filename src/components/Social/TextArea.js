@@ -2,9 +2,14 @@ import React, { Component } from "react";
 
 class TextArea extends Component {
   render() {
+    const { placeholder, height } = this.props;
     return (
       <div className="soc-area">
-        <textarea placeholder="What's on your mind?" maxLength={500} />
+        <textarea
+          placeholder={placeholder}
+          maxLength={500}
+          style={{ minHeight: height }}
+        />
       </div>
     );
   }

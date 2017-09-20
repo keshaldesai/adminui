@@ -10,7 +10,8 @@ $theme: #ff530d;
 .sidebar {
   background-color: $bg;
   min-height: 100vh;
-  transition: width 200ms;
+  transition: all 500ms ease-in;
+  max-width: 250px;
 }
 
 .user {

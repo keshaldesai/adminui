@@ -1,18 +1,19 @@
 import React, { Component } from "react";
-import TextArea from "./TextArea";
+import TextArea from "../TextArea";
 import Actions from "./Actions";
 import Send from "./Send";
+import Panel from "../../Shared/Panel";
 
 class New extends Component {
   render() {
     return (
-      <div className="soc-new">
-        <TextArea />
+      <Panel color="#efefef">
+        <TextArea placeholder="What's on your mind?" height="140px" />
         <div className="soc-options flex-row">
           <Actions />
           <Send />
         </div>
-      </div>
+      </Panel>
     );
   }
 }
