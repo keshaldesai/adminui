@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import About from "./About";
+import About from "./About/About";
 import New from "./New";
 import SocialItem from "./SocialItem";
 
