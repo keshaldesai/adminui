@@ -10,8 +10,8 @@
 .soc-about-overlay {
   background-color: rgba(0, 0, 0, 0.6);
   height: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-flow: row nowrap;
 }
 
 .soc-mydesc {
@@ -52,12 +52,12 @@
 .soc-me {
   margin-left: auto;
   background-color: rgba(0, 0, 0, 0.6);
-  max-width: 350px;
-  width: 100%;
+  width: 350px;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-top: 32px;
+  transition: all 400ms;
   .sh-icon {
     padding-bottom: 8px;
   }
@@ -138,5 +138,14 @@
   transition: background-color 200ms;
   &:hover {
     background-color: lighten(#1abc9c, 10%);
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .soc-mydesc {
+    display: none;
+  }
+  .soc-me {
+    width: 100%;
   }
 }
