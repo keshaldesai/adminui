@@ -109,9 +109,20 @@ $theme: #ff530d;
 .sidebar-close {
   transition: all 300ms;
   opacity: 0;
-  display: none;
+  visibility: hidden;
   position: fixed;
   left: 216px;
   top: 2px;
   color: white;
+}
+
+@media screen and (max-width: 1000px) {
+  .sidebar {
+    width: 0%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+  }
 }

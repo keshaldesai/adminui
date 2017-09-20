@@ -6,9 +6,7 @@ function User({ user }) {
   return (
     <div className="user">
       <UserIcon picture={picture} color="#bdd4de" width="40px" />
-      <div className="user-name">
-        {name}
-      </div>
+      <div className="user-name">{name}</div>
     </div>
   );
 }

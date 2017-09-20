@@ -66,15 +66,6 @@ body {
 }
 
 @media screen and (max-width: 1000px) {
-  .sidebar {
-    width: 0%;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    overflow-x: hidden;
-  }
-
   .settings {
     display: none;
   }
