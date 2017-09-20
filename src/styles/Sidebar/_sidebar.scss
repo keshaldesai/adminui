@@ -122,3 +122,13 @@ $theme: #ff530d;
     overflow-x: hidden;
   }
 }
+
+@media screen and (min-width: 1001px) {
+  .sidebar {
+    transform: none !important;
+  }
+  .sidebar-close {
+    opacity: 1 !important;
+    visibility: hidden !important;
+  }
+}
