@@ -2,9 +2,9 @@ import React from "react";
 import Tab from "./Tab";
 
 function TabMenu({ activeTab, handleClick }) {
-  const tabs = ["home", "comments", "pie-chart", "list", "bell"];
+  const tabs = ["home", "comments", "list", "bell"];
   return (
-    <div className="tabmenu">
+    <div className="tabmenu flex-row">
       {tabs.map((tab, index) => {
         return (
           <Tab

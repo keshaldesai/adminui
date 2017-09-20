@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import About from "./About/About";
-import New from "./New";
+import New from "./New/New";
 import SocialItem from "./SocialItem";
 
 class Social extends Component {

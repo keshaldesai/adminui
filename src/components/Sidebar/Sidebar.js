@@ -3,7 +3,6 @@ import User from "./User";
 import TabMenu from "./TabMenu";
 import MainTab from "./Tabs/Main/MainTab";
 import SocialTab from "./Tabs/Social/SocialTab";
-import StatisticsTab from "./Tabs/Statistics/StatisticsTab";
 import HistoryTab from "./Tabs/History/HistoryTab";
 import AlertTab from "./Tabs/Alert/AlertTab";
 import { CSSTransitionGroup } from "react-transition-group";
@@ -40,26 +39,20 @@ class Sidebar extends Component {
             <SocialTab users={users.slice(1)} />
           </div>
         );
-      case 2:
-        return (
-          <div key={2}>
-            <StatisticsTab />
-          </div>
-        );
       case 3:
         return (
-          <div key={3}>
+          <div key={2}>
             <HistoryTab users={users.slice(1, 4)} />
           </div>
         );
       case 4:
         return (
-          <div key={4}>
+          <div key={3}>
             <AlertTab />
           </div>
         );
       default:
-        return <div key={5} />;
+        return <div key={4} />;
     }
   }
 
