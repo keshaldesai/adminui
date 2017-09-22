@@ -3,7 +3,9 @@
   textarea {
     font-size: 16px;
     font-family: "Open Sans", sans-serif;
-    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 60px;
     border: none;
     outline: none;
   }
@@ -131,6 +133,28 @@
   transition: background-color 200ms;
   &:hover {
     background-color: lighten(#1abc9c, 10%);
+  }
+}
+
+.soc-item-meta {
+  margin: 8px 24px;
+}
+
+.soc-user-info {
+  margin-left: 8px;
+}
+
+.soc-user-name {
+  color: #000000;
+}
+
+.soc-user-loc {
+  font-size: 12px;
+}
+
+.sh-panel {
+  img {
+    width: 100%;
   }
 }
 
