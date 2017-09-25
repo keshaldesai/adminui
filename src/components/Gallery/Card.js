@@ -15,16 +15,17 @@ class Card extends Component {
     this.setState({ showFull: !this.state.showFull });
   }
   render() {
-    const { title, date, likes, url } = this.props.info;
+    const { title, date, likes, image } = this.props.info;
     const { active, showFull } = this.state;
     const activeStyle = active
       ? { backgroundColor: "#ff0000", borderColor: "#ff0000", color: "#ffffff" }
       : {};
     const newLikes = active ? likes + 1 : likes;
+    const imageUrl = `https://images.unsplash.com/photo-${image}?dpr=1&auto=compress,format&fit=crop&w=260&h=195&q=80&cs=tinysrgb&crop=`;
     return (
       <div className="card">
         <div className="card-img-cont" onClick={this.handleMagnify}>
-          <img alt="cardimage" src={url + "?w=260&h=195&fit=crop"} />
+          <img alt="cardimage" src={imageUrl} />
           <div className="card-img-over" />
           <div className="card-mag">
             <i className="fa fa-search-plus fa-2x" aria-hidden="true" />
@@ -41,7 +42,7 @@ class Card extends Component {
           {" " + newLikes}
         </div>
         {showFull ? (
-          <FullImg url={url} handleMagnify={this.handleMagnify} />
+          <FullImg image={image} handleMagnify={this.handleMagnify} />
         ) : (
           ""
         )}
