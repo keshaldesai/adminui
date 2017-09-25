@@ -5,13 +5,14 @@
 }
 
 .inbox-container {
-  display: grid;
-  grid-template-columns: 300px 1fr;
+  display: flex;
+  flex-flow: row nowrap;
 }
 
 .in-mailboxes {
   padding: 8px 0px;
   border-right: 1px solid #efefef;
+  min-width: 300px;
 }
 
 .in-group-title {
@@ -70,7 +71,8 @@
 }
 
 .email {
-  padding: 16px 32px;
+  margin: 0px 16px;
+  padding: 16px 0px;
   border-bottom: 1px solid #efefef;
   &:hover {
     background-color: lightyellow;
@@ -95,4 +97,10 @@
 
 .email-content {
   margin: 0px 8px;
+}
+
+@media screen and (max-width: 750px) {
+  .in-mailboxes {
+    display: none;
+  }
 }

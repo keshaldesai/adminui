@@ -36,21 +36,15 @@ class MailboxItem extends Component {
           <UserIcon picture={picture} color={colors[index]} width="40px" />
         </div>
         <div className="email-main">
-          <div className="email-name">
-            {name}
-          </div>
-          <div className="email-meta flex-row">
+          <div className="email-name">{name}</div>
+          <div className="email-meta">
             <Label color={colors[index]}>LABEL</Label>
-            <span className="email-content">
-              {content[index]}
-            </span>
+            <span className="email-content">{content[index]}</span>
           </div>
         </div>
         <div className="email-extra">
           <div className="email-date">{`Jun ${index + 10}th`}</div>
-          <div className="email-number">
-            {`#${index + 1}`}
-          </div>
+          <div className="email-number">{`#${index + 1}`}</div>
         </div>
       </div>
     );
