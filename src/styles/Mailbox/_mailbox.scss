@@ -7,7 +7,7 @@ $borders: darken($menus, 10%);
 
 .mb-block {
   border-bottom: 1px solid $menus;
-  padding: 24px 32px;
+  padding: 24px 24px;
 }
 
 .mail-reply {
@@ -61,4 +61,14 @@ $borders: darken($menus, 10%);
   background-color: #ff6138;
   border-color: #ff6138;
   color: #ffffff;
+}
+
+@media screen and (max-width: 420px) {
+  .button-group {
+    margin-right: 4px;
+  }
+  .mb-button {
+    margin-right: 4px;
+    padding: 1px 8px;
+  }
 }
