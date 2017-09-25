@@ -38,7 +38,6 @@ class MainTab extends Component {
   render() {
     const { activePage } = this.props;
     const pages = [
-      { icon: "tachometer", title: "Dashboard", url: "/dashboard" },
       {
         icon: "envelope-o",
         title: "Mailbox",
