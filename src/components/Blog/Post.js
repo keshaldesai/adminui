@@ -30,6 +30,7 @@ class Post extends Component {
               est velit elitr copiosae. Id nominati delicata periculis usu.
             </p>
             <iframe
+              title="youtube"
               width="100%"
               height="315"
               src="https://www.youtube-nocookie.com/embed/rkby8QrWMhs?rel=0"

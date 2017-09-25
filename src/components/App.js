@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Sidebar from "./Sidebar/Sidebar";
-import Dashboard from "./Dashboard/Dashboard";
 import Gallery from "./Gallery/Gallery";
 import Inbox from "./Mailbox/Inbox/Inbox";
 import Compose from "./Mailbox/Compose/Compose";
@@ -101,7 +100,6 @@ class App extends Component {
           <div className="page" style={{ translateX: "260px" }}>
             <Header handleClick={this.handleClick} />
             <div className="content">
-              <Route path="/dashboard" component={Dashboard} />
               <Route
                 exact
                 path="/mailbox/inbox"
