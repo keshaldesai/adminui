@@ -158,6 +158,20 @@
   }
 }
 
+.comm-one {
+  border-bottom: 2px solid #efefef;
+  font-size: 14px;
+  padding: 16px 0px;
+}
+
+.comm-info {
+  margin: 0px 8px;
+}
+
+.comm-name {
+  color: black;
+}
+
 @media screen and (max-width: 620px) {
   .soc-mydesc {
     display: none;

@@ -6,11 +6,29 @@ import SocialItem from "./SocialItem/SocialItem";
 class Social extends Component {
   render() {
     const { users } = this.props;
+    const comments1 = [
+      { user: users[0], content: "Interesting watch!" },
+      {
+        user: users[3],
+        content:
+          "Some innovative ideas, can't wait to see them all implemented."
+      }
+    ];
+    const comments2 = [
+      {
+        user: users[5],
+        content: "I don't think I could start my day without coffee!"
+      }
+    ];
     return (
       <div className="social">
         <About user={users[0]} />
         <New />
-        <SocialItem user={users[2]} location="Mountain View, CA">
+        <SocialItem
+          user={users[2]}
+          location="Mountain View, CA"
+          comments={comments1}
+        >
           <p>Google I/O Keynote 2017</p>
           <iframe
             title="youtube"
@@ -36,7 +54,11 @@ class Social extends Component {
             allowFullScreen
           />
         </SocialItem>
-        <SocialItem user={users[7]} location="New York, NY">
+        <SocialItem
+          user={users[7]}
+          location="New York, NY"
+          comments={comments2}
+        >
           <p>Nothing better on a Sunday morning!</p>
           <img
             src="https://images.unsplash.com/photo-1467189386127-c4e5e31ee213?dpr=1.5&auto=format&fit=crop&w=1080&h=720&q=80&cs=tinysrgb&crop="
