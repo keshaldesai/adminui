@@ -14,10 +14,11 @@ const SinglePost = ({ data }) => {
     shares,
     likes
   } = data;
+  const imageUrl = `https://images.unsplash.com/photo-${image}?dpr=1&auto=compress,format&fit=crop&w=1350&h=&q=80&cs=tinysrgb&crop=`;
   return (
     <Panel>
       <div className="post-image">
-        <img src={image} alt="postimage" />
+        <img src={imageUrl} alt="postimage" />
       </div>
       <div className="post-main">
         <div className="post-title">{title}</div>
