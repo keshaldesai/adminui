@@ -10,6 +10,12 @@ $borders: darken($menus, 10%);
   padding: 24px 24px;
 }
 
+.mail-actions {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
 .mail-reply {
   border-bottom: none;
 }

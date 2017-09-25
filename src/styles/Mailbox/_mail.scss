@@ -3,7 +3,10 @@
 }
 
 .mail-from {
-  justify-content: space-between;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .from-user .sh-icon {
@@ -21,6 +24,7 @@
   margin-top: 4px;
 }
 .from-extra {
+  margin-left: auto;
   text-align: center;
 }
 
@@ -54,4 +58,10 @@
   padding: 8px;
   height: 150px;
   cursor: text;
+}
+
+@media screen and (max-width: 700px) {
+  .from-extra {
+    margin: 16px auto;
+  }
 }

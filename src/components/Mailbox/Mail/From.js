@@ -4,7 +4,7 @@ import UserIcon from "../../Shared/UserIcon";
 class From extends Component {
   render() {
     return (
-      <div className="mb-block mail-from flex-row">
+      <div className="mb-block mail-from">
         <div className="from-user flex-row">
           <UserIcon
             picture="https://randomuser.me/api/portraits/thumb/men/72.jpg"
