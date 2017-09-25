@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import SinglePost from "./SinglePost";
+import SingleItem from "./SingleItem";
 
 class Posts extends Component {
   render() {
@@ -50,7 +50,7 @@ class Posts extends Component {
     return (
       <div className="posts">
         {data.map(onePost => {
-          return <SinglePost data={onePost} key={onePost.postId} />;
+          return <SingleItem data={onePost} key={onePost.postId} />;
         })}
       </div>
     );

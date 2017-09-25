@@ -1,7 +1,7 @@
 import React from "react";
 import Panel from "../Shared/Panel";
 
-const SinglePost = ({ data }) => {
+const SingleItem = ({ data }) => {
   const {
     image,
     author,
@@ -48,4 +48,4 @@ const SinglePost = ({ data }) => {
   );
 };
 
-export default SinglePost;
+export default SingleItem;
