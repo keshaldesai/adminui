@@ -66,6 +66,14 @@ body {
   box-sizing: border-box;
 }
 
+.link {
+  color: #1abc9c;
+  cursor: pointer;
+  &:hover {
+    color: darken(#1abc9c, 10%);
+  }
+}
+
 @media screen and (max-width: 1000px) {
   .settings {
     display: none;

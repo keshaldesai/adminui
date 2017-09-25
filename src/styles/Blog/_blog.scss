@@ -1,8 +1,6 @@
-.posts {
-  .post-image {
-    border-radius: 4px 4px 0px 0px;
-    overflow: hidden;
-  }
+.post-image {
+  border-radius: 4px 4px 0px 0px;
+  overflow: hidden;
   img {
     margin-top: -80px;
   }
@@ -13,7 +11,8 @@
   border-bottom: 2px solid #efefef;
 }
 
-.post-title {
+.post-title,
+.post-subtitle {
   color: #000000;
   font-size: 22px;
   font-weight: bolder;
@@ -46,4 +45,21 @@
 
 .post-likes {
   color: #e08283;
+}
+
+.post-emphasis {
+  color: #000000;
+}
+
+.post-subtitle {
+  margin-top: 16px;
+}
+
+.post-quote {
+  border-left: 8px solid #efefef;
+  padding-left: 8px;
+}
+
+.post-subextra {
+  font-size: 14px;
 }
