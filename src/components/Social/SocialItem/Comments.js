@@ -6,7 +6,7 @@ const Comments = ({ data }) => {
     <div className="comm">
       {data.map(comment => {
         return (
-          <div className="comm-one flex-row">
+          <div className="comm-one flex-row" key={comment.user.name}>
             <UserIcon
               color="#ffffff"
               picture={comment.user.picture}
