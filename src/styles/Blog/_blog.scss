@@ -63,3 +63,12 @@
 .post-subextra {
   font-size: 14px;
 }
+
+.posts {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.posts-extra {
+  min-width: 300px;
+}
