@@ -115,6 +115,11 @@ class App extends Component {
               />
               <Route path="/blog/post" component={Post} />
               <Route path="/blog/posts" component={Posts} />
+              <Route
+                exact
+                path="/*"
+                render={props => <Social {...props} users={users} />}
+              />
             </div>
           </div>
         </div>
