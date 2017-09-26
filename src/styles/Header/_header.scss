@@ -7,6 +7,10 @@ $theme: #ff530d;
 .header {
   background-color: $bg;
   font-size: 20px;
+  a {
+    text-decoration: none;
+    color: #839497;
+  }
 }
 
 .logo {
@@ -27,15 +31,10 @@ $theme: #ff530d;
   padding: 24px 24px;
   cursor: pointer;
   position: relative;
+  border-left: 1px solid darken($font, 30%);
   &:hover {
     color: #ffffff;
   }
-}
-
-.button-circle,
-.button-user,
-.button-envelope {
-  border-left: 1px solid darken($font, 30%);
 }
 
 .button-circle {

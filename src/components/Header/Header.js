@@ -3,6 +3,7 @@ import HeaderItem from "./HeaderItem";
 import HeaderItemDrop from "./HeaderItemDrop";
 import Notifications from "./Notifications";
 import Feed from "./Feed";
+import { Link } from "react-router-dom";
 
 class Header extends Component {
   render() {
@@ -16,9 +17,12 @@ class Header extends Component {
           <span>My Business</span>
         </div>
         <div className="settings flex-row">
-          <HeaderItem button="circle" />
-          <HeaderItem button="user" />
-          <HeaderItem button="envelope" />
+          <Link to="/social">
+            <HeaderItem button="user" />
+          </Link>
+          <Link to="/mailbox/inbox">
+            <HeaderItem button="envelope" />
+          </Link>
           <HeaderItemDrop button="bullhorn" type="notif">
             <Notifications />
           </HeaderItemDrop>
@@ -26,7 +30,9 @@ class Header extends Component {
             <Feed />
           </HeaderItemDrop>
         </div>
-        <HeaderItem button="power-off" />
+        <a href="https://google.com">
+          <HeaderItem button="power-off" />
+        </a>
       </div>
     );
   }
