@@ -28,29 +28,13 @@ class Sidebar extends Component {
     }
     switch (activeTab) {
       case 0:
-        return (
-          <div key={0}>
-            <MainTab activePage={match.url} />
-          </div>
-        );
+        return <MainTab activePage={match.url} key={0} />;
       case 1:
-        return (
-          <div key={1}>
-            <SocialTab users={users.slice(1)} />
-          </div>
-        );
+        return <SocialTab users={users.slice(1)} key={1} />;
+      case 2:
+        return <HistoryTab users={users.slice(1, 4)} key={2} />;
       case 3:
-        return (
-          <div key={2}>
-            <HistoryTab users={users.slice(1, 4)} />
-          </div>
-        );
-      case 4:
-        return (
-          <div key={3}>
-            <AlertTab />
-          </div>
-        );
+        return <AlertTab key={3} />;
       default:
         return <div key={4} />;
     }
@@ -59,12 +43,7 @@ class Sidebar extends Component {
   render() {
     const { activeTab } = this.state;
     const { users, show, handleClose } = this.props;
-    const user = users
-      ? users[0]
-      : {
-          name: "John Smith",
-          picture: "http://via.placeholder.com/35/5e6d70/ffffff?text=User"
-        };
+    const user = users[0];
     const style = show ? { transform: "translate(350px)" } : {};
     const exitStyle = show ? { opacity: 1, visibility: "visible" } : {};
     return (
