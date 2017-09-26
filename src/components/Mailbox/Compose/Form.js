@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Input from "./Input";
 
 class Form extends Component {
   constructor(props) {
@@ -18,37 +19,22 @@ class Form extends Component {
   }
 
   render() {
+    const { to, cc, bcc, subject } = this.state;
     return (
-      <div className="comp-form">
-        <div className="comp-header">To</div>
-        <input
-          type="text"
+      <div>
+        <Input
+          value={to}
+          handleChange={this.handleChange}
+          name="To"
           placeholder="Example: john@domain.com"
-          name="to"
-          value={this.state.to}
-          onChange={this.handleChange}
         />
-        <div className="comp-header">CC</div>
-        <input
-          type="text"
-          name="cc"
-          value={this.state.cc}
-          onChange={this.handleChange}
-        />
-        <div className="comp-header">BCC</div>
-        <input
-          type="text"
-          name="bcc"
-          value={this.state.bcc}
-          onChange={this.handleChange}
-        />
-        <div className="comp-header">Subject</div>
-        <input
-          type="text"
+        <Input value={cc} handleChange={this.handleChange} name="CC" />
+        <Input value={bcc} handleChange={this.handleChange} name="BCC" />
+        <Input
+          value={subject}
+          handleChange={this.handleChange}
+          name="Subject"
           placeholder="Subject title here"
-          name="subject"
-          value={this.state.subject}
-          onChange={this.handleChange}
         />
       </div>
     );
