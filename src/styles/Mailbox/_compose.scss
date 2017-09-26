@@ -11,21 +11,19 @@
 }
 
 .comp-form {
-  display: flex;
-  flex-flow: row wrap;
-  align-items: center;
-  margin: 8px 24px;
+  margin: 8px 8px;
   input {
     padding: 6px 6px;
     width: 100%;
     box-sizing: border-box;
-    margin-top: 8px;
   }
 }
 
 .comp-header {
   text-align: right;
   font-weight: bolder;
+  margin-right: 8px;
+  min-width: 65px;
 }
 
 .comp-options {

@@ -2,7 +2,7 @@ import React from "react";
 
 const Input = ({ value, placeholder, name, handleChange }) => {
   return (
-    <div className="comp-form">
+    <div className="comp-form flex-row">
       <span className="comp-header">{name}</span>
       <input
         type="text"
