@@ -3,6 +3,9 @@ import Panel from "../Shared/Panel";
 import PostMeta from "./PostMeta";
 
 class Post extends Component {
+  componentDidMount() {
+    this.props.handleActive();
+  }
   render() {
     const imageUrl =
       "https://images.unsplash.com/photo-1505841392587-67bfc23db3f9?dpr=1&auto=compress,format&fit=crop&w=1189&h=&q=80&cs=tinysrgb&crop=";

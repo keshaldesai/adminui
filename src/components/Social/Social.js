@@ -4,6 +4,9 @@ import New from "./New/New";
 import SocialItem from "./SocialItem/SocialItem";
 
 class Social extends Component {
+  componentDidMount() {
+    this.props.handleActive();
+  }
   render() {
     const { users } = this.props;
     const comments1 = [

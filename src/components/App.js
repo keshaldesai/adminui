@@ -13,75 +13,17 @@ import Header from "./Header/Header";
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = { sidebar: false };
+    this.state = { sidebar: false, page: 0 };
     this.handleClick = this.handleClick.bind(this);
   }
   handleClick() {
     this.setState({ sidebar: !this.state.sidebar });
   }
+  handleActive(page) {
+    this.setState({ page });
+    console.log(page);
+  }
   render() {
-    const users = [
-      {
-        name: "Carolyn Rivera",
-        picture: "https://randomuser.me/api/portraits/thumb/women/24.jpg"
-      },
-      {
-        name: "Sonia Rodriquez",
-        picture: "https://randomuser.me/api/portraits/thumb/women/13.jpg"
-      },
-      {
-        name: "Elsie Terry",
-        picture: "https://randomuser.me/api/portraits/thumb/women/85.jpg"
-      },
-      {
-        name: "Ronald Vargas",
-        picture: "https://randomuser.me/api/portraits/thumb/men/39.jpg"
-      },
-      {
-        name: "Calvin Baker",
-        picture: "https://randomuser.me/api/portraits/thumb/men/43.jpg"
-      },
-      {
-        name: "Monica Snyder",
-        picture: "https://randomuser.me/api/portraits/thumb/women/22.jpg"
-      },
-      {
-        name: "Howard Mills",
-        picture: "https://randomuser.me/api/portraits/thumb/men/28.jpg"
-      },
-      {
-        name: "Liam Duncan",
-        picture: "https://randomuser.me/api/portraits/thumb/men/7.jpg"
-      },
-      {
-        name: "Freddie Lucas",
-        picture: "https://randomuser.me/api/portraits/thumb/men/49.jpg"
-      },
-      {
-        name: "Kevin Jacobs",
-        picture: "https://randomuser.me/api/portraits/thumb/men/16.jpg"
-      },
-      {
-        name: "Sonia Butler",
-        picture: "https://randomuser.me/api/portraits/thumb/women/11.jpg"
-      },
-      {
-        name: "Billie Black",
-        picture: "https://randomuser.me/api/portraits/thumb/women/1.jpg"
-      },
-      {
-        name: "Marsha Stewart",
-        picture: "https://randomuser.me/api/portraits/thumb/women/13.jpg"
-      },
-      {
-        name: "Riley Walker",
-        picture: "https://randomuser.me/api/portraits/thumb/women/83.jpg"
-      },
-      {
-        name: "Armando Gray",
-        picture: "https://randomuser.me/api/portraits/thumb/men/40.jpg"
-      }
-    ];
     return (
       <Router>
         <div className="app">
@@ -103,22 +45,86 @@ class App extends Component {
               <Route
                 exact
                 path="/mailbox/inbox"
-                render={props => <Inbox {...props} users={users} />}
+                render={props => (
+                  <Inbox
+                    {...props}
+                    users={users}
+                    handleActive={this.handleActive.bind(this, 0)}
+                  />
+                )}
               />
-              <Route path="/mailbox/compose" component={Compose} />
-              <Route path="/mailbox/mail" component={Mail} />
-              <Route path="/gallery" component={Gallery} />
+              <Route
+                exact
+                path="/mailbox/mail"
+                render={props => (
+                  <Mail
+                    {...props}
+                    handleActive={this.handleActive.bind(this, 1)}
+                  />
+                )}
+              />
+              <Route
+                exact
+                path="/mailbox/compose"
+                render={props => (
+                  <Compose
+                    {...props}
+                    handleActive={this.handleActive.bind(this, 2)}
+                  />
+                )}
+              />
+              <Route
+                exact
+                path="/gallery"
+                render={props => (
+                  <Gallery
+                    {...props}
+                    handleActive={this.handleActive.bind(this, 3)}
+                  />
+                )}
+              />
               <Route
                 exact
                 path="/social"
-                render={props => <Social {...props} users={users} />}
+                render={props => (
+                  <Social
+                    {...props}
+                    users={users}
+                    handleActive={this.handleActive.bind(this, 4)}
+                  />
+                )}
               />
-              <Route path="/blog/post" component={Post} />
-              <Route path="/blog/posts" component={Posts} />
+
+              <Route
+                exact
+                path="/blog/posts"
+                render={props => (
+                  <Posts
+                    {...props}
+                    handleActive={this.handleActive.bind(this, 5)}
+                  />
+                )}
+              />
+              <Route
+                exact
+                path="/blog/post"
+                render={props => (
+                  <Post
+                    {...props}
+                    handleActive={this.handleActive.bind(this, 6)}
+                  />
+                )}
+              />
               <Route
                 exact
                 path="/*"
-                render={props => <Social {...props} users={users} />}
+                render={props => (
+                  <Social
+                    {...props}
+                    users={users}
+                    handleActive={this.handleActive.bind(this, 4)}
+                  />
+                )}
               />
             </div>
           </div>
@@ -127,5 +133,67 @@ class App extends Component {
     );
   }
 }
+const users = [
+  {
+    name: "Carolyn Rivera",
+    picture: "https://randomuser.me/api/portraits/thumb/women/24.jpg"
+  },
+  {
+    name: "Sonia Rodriquez",
+    picture: "https://randomuser.me/api/portraits/thumb/women/13.jpg"
+  },
+  {
+    name: "Elsie Terry",
+    picture: "https://randomuser.me/api/portraits/thumb/women/85.jpg"
+  },
+  {
+    name: "Ronald Vargas",
+    picture: "https://randomuser.me/api/portraits/thumb/men/39.jpg"
+  },
+  {
+    name: "Calvin Baker",
+    picture: "https://randomuser.me/api/portraits/thumb/men/43.jpg"
+  },
+  {
+    name: "Monica Snyder",
+    picture: "https://randomuser.me/api/portraits/thumb/women/22.jpg"
+  },
+  {
+    name: "Howard Mills",
+    picture: "https://randomuser.me/api/portraits/thumb/men/28.jpg"
+  },
+  {
+    name: "Liam Duncan",
+    picture: "https://randomuser.me/api/portraits/thumb/men/7.jpg"
+  },
+  {
+    name: "Freddie Lucas",
+    picture: "https://randomuser.me/api/portraits/thumb/men/49.jpg"
+  },
+  {
+    name: "Kevin Jacobs",
+    picture: "https://randomuser.me/api/portraits/thumb/men/16.jpg"
+  },
+  {
+    name: "Sonia Butler",
+    picture: "https://randomuser.me/api/portraits/thumb/women/11.jpg"
+  },
+  {
+    name: "Billie Black",
+    picture: "https://randomuser.me/api/portraits/thumb/women/1.jpg"
+  },
+  {
+    name: "Marsha Stewart",
+    picture: "https://randomuser.me/api/portraits/thumb/women/13.jpg"
+  },
+  {
+    name: "Riley Walker",
+    picture: "https://randomuser.me/api/portraits/thumb/women/83.jpg"
+  },
+  {
+    name: "Armando Gray",
+    picture: "https://randomuser.me/api/portraits/thumb/men/40.jpg"
+  }
+];
 
 export default App;

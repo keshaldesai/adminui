@@ -5,6 +5,9 @@ import CompEditor from "./CompEditor";
 import Options from "./Options";
 
 class Compose extends Component {
+  componentDidMount() {
+    this.props.handleActive();
+  }
   render() {
     return (
       <div className="main compose">

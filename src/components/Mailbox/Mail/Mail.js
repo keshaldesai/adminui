@@ -6,6 +6,9 @@ import From from "./From";
 import Reply from "./Reply";
 
 class Mail extends Component {
+  componentDidMount() {
+    this.props.handleActive();
+  }
   render() {
     return (
       <div className="main mail">

@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import SingleItem from "./SingleItem";
 
 class Posts extends Component {
+  componentDidMount() {
+    this.props.handleActive();
+  }
   render() {
     const data = [
       {

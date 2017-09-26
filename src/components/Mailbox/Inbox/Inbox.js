@@ -4,6 +4,9 @@ import Mailboxes from "./Mailboxes";
 import Emails from "./Emails";
 
 class Inbox extends Component {
+  componentDidMount() {
+    this.props.handleActive();
+  }
   render() {
     return (
       <div className="main inbox">
