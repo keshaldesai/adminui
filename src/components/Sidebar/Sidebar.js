@@ -22,13 +22,10 @@ class Sidebar extends Component {
 
   renderTab() {
     const { activeTab } = this.state;
-    const { match, users } = this.props;
-    if (!users || users.length !== 15) {
-      return;
-    }
+    const { match, users, page } = this.props;
     switch (activeTab) {
       case 0:
-        return <MainTab activePage={match.url} key={0} />;
+        return <MainTab page={page} key={0} />;
       case 1:
         return <SocialTab users={users.slice(1)} key={1} />;
       case 2:

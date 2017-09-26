@@ -13,17 +13,17 @@ import Header from "./Header/Header";
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = { sidebar: false, page: 0 };
+    this.state = { showSidebar: false, page: 0 };
     this.handleClick = this.handleClick.bind(this);
   }
   handleClick() {
-    this.setState({ sidebar: !this.state.sidebar });
+    this.setState({ showSidebar: !this.state.showSidebar });
   }
   handleActive(page) {
     this.setState({ page });
-    console.log(page);
   }
   render() {
+    const { showSidebar, page } = this.state;
     return (
       <Router>
         <div className="app">
@@ -34,8 +34,9 @@ class App extends Component {
               <Sidebar
                 {...props}
                 users={users}
-                show={this.state.sidebar}
+                show={showSidebar}
                 handleClose={this.handleClick}
+                page={page}
               />
             )}
           />
@@ -112,17 +113,6 @@ class App extends Component {
                   <Post
                     {...props}
                     handleActive={this.handleActive.bind(this, 6)}
-                  />
-                )}
-              />
-              <Route
-                exact
-                path="/*"
-                render={props => (
-                  <Social
-                    {...props}
-                    users={users}
-                    handleActive={this.handleActive.bind(this, 4)}
                   />
                 )}
               />
