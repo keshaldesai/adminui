@@ -70,5 +70,19 @@
 }
 
 .posts-extra {
-  min-width: 300px;
+  min-width: 400px;
+}
+
+.posts-about-info {
+  margin: 24px;
+}
+
+.posts-about-icon {
+  border-radius: 0px 4px 4px 0px;
+  margin-left: auto;
+  padding: 0px 24px;
+  background-color: #ffb300;
+  display: flex;
+  justify-content: center;
+  align-self: stretch;
 }
