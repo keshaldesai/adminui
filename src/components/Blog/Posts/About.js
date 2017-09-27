@@ -7,7 +7,7 @@ const About = () => {
     <Panel>
       <div className="flex-row">
         <div className="posts-panel-inner">
-          Welcome to my page. Please follow me to get updates on what I'm up to!
+          Welcome to my page. Please follow me to get updates on my posts!
         </div>
         <div className="posts-about-icon">
           <UserIcon
