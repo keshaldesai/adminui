@@ -1,6 +1,6 @@
 import React from "react";
-import Panel from "../Shared/Panel";
-import PostMeta from "./PostMeta";
+import Panel from "../../Shared/Panel";
+import PostMeta from "../PostMeta";
 
 const SingleItem = ({ data }) => {
   const {

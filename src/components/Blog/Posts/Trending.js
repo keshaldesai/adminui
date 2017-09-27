@@ -1,5 +1,5 @@
 import React from "react";
-import Panel from "../Shared/Panel";
+import Panel from "../../Shared/Panel";
 
 const Trending = () => {
   return (

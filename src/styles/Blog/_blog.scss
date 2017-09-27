@@ -73,8 +73,8 @@
   min-width: 400px;
 }
 
-.posts-about-info {
-  margin: 24px;
+.posts-panel-inner {
+  padding: 24px;
 }
 
 .posts-about-icon {
@@ -85,4 +85,43 @@
   display: flex;
   justify-content: center;
   align-self: stretch;
+}
+
+.posts-social-icon {
+  height: 55px;
+  width: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 2px solid #efefef;
+  cursor: pointer;
+  transition: all 200ms;
+  &:hover {
+    color: #ffffff;
+  }
+}
+
+.posts-facebook:hover {
+  background-color: #3b5998;
+  border-color: #3b5998;
+}
+
+.posts-twitter:hover {
+  background-color: #1da1f2;
+  border-color: #1da1f2;
+}
+
+.posts-google-plus:hover {
+  background-color: #db4437;
+  border-color: #db4437;
+}
+
+.posts-pinterest-p:hover {
+  background-color: #bd081c;
+  border-color: #bd081c;
+}
+.posts-instagram:hover {
+  background-color: #8a3ab9;
+  border-color: #8a3ab9;
 }

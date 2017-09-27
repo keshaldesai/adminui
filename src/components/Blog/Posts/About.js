@@ -1,12 +1,12 @@
 import React from "react";
-import Panel from "../Shared/Panel";
-import UserIcon from "../Shared/UserIcon";
+import Panel from "../../Shared/Panel";
+import UserIcon from "../../Shared/UserIcon";
 
 const About = () => {
   return (
     <Panel>
       <div className="flex-row">
-        <div className="posts-about-info">
+        <div className="posts-panel-inner">
           Welcome to my page. Please follow me to get updates on what I'm up to!
         </div>
         <div className="posts-about-icon">

@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import SingleItem from "./SingleItem";
-import About from "./About";
-import Social from "./Social";
-import Trending from "./Trending";
-import Writers from "./Writers";
+import SingleItem from "./Posts/SingleItem";
+import About from "./Posts/About";
+import Social from "./Posts/Social";
+import Trending from "./Posts/Trending";
+import Writers from "./Posts/Writers";
 
 class Posts extends Component {
   componentDidMount() {
