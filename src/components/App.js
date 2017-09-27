@@ -102,6 +102,7 @@ class App extends Component {
                 render={props => (
                   <Posts
                     {...props}
+                    users={users}
                     handleActive={this.handleActive.bind(this, 5)}
                   />
                 )}

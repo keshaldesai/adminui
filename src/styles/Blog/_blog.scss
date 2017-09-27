@@ -179,3 +179,45 @@
   border-width: 14px;
   margin-top: -14px;
 }
+
+.spotlight {
+  margin-top: 8px;
+}
+
+.spotlight-name {
+  margin: 0px 16px;
+}
+
+.suscribe {
+  input {
+    width: 100%;
+    border: 2px solid #efefef;
+    font-size: 14px;
+    padding: 0px 4px;
+    height: 28px;
+    outline-color: #1abc9c;
+  }
+}
+
+.suscribe-button {
+  background-color: #1abc9c;
+  border: 2px solid #1abc9c;
+  border-radius: 0px 20px 20px 0px;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: bolder;
+  letter-spacing: 1px;
+  padding: 4px 6px;
+  cursor: pointer;
+  user-select: none;
+  &:hover {
+    background-color: lighten(#1abc9c, 10%);
+    border-color: lighten(#1abc9c, 10%);
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .posts-extra {
+    display: none;
+  }
+}

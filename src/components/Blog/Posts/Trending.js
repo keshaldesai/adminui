@@ -16,7 +16,7 @@ const Trending = () => {
   ];
   return (
     <Panel>
-      <PostsTop>
+      <PostsTop title="TRENDING POSTS">
         <BlogLink
           title="Brute munere blandit"
           author="Marsha Stewart"

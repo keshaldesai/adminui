@@ -21,7 +21,7 @@ class Posts extends Component {
           <About />
           <Social />
           <Trending />
-          <Writers />
+          <Writers users={this.props.users} />
         </div>
       </div>
     );
