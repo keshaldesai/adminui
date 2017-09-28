@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Sidebar from "./Sidebar/Sidebar";
 import Gallery from "./Gallery/Gallery";
 import Inbox from "./Mailbox/Inbox/Inbox";
@@ -27,18 +27,11 @@ class App extends Component {
     return (
       <Router>
         <div className="app">
-          <Route
-            exact
-            path="*"
-            render={props => (
-              <Sidebar
-                {...props}
-                users={users}
-                show={showSidebar}
-                handleClose={this.handleClick}
-                page={page}
-              />
-            )}
+          <Sidebar
+            users={users}
+            show={showSidebar}
+            handleClose={this.handleClick}
+            page={page}
           />
           <div className="page" style={{ translateX: "260px" }}>
             <Header handleClick={this.handleClick} />
