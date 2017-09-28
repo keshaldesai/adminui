@@ -45,6 +45,7 @@ $theme: #ff530d;
   background-color: $theme;
   color: #ffffff;
   font-weight: bolder;
+  border: none;
   &:hover {
     transition: background-color 200ms;
     background-color: lighten($theme, 10%);
@@ -55,4 +56,12 @@ $theme: #ff530d;
   background-color: rgb(26, 188, 156);
   color: #ffffff;
   display: none;
+  border: none;
+}
+
+@media screen and (max-width: 380px) {
+  .logo {
+    font-size: 14px;
+    padding: 0px 8px;
+  }
 }
