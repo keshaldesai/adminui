@@ -9,7 +9,7 @@ class Emails extends Component {
     }
     const emailUsers = users.slice(1, 11);
     return (
-      <div className="inbox-emails">
+      <div className="in-emails">
         {emailUsers.map((user, index) => {
           return <SingleEmail user={user} key={index} index={index} />;
         })}
