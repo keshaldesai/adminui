@@ -36,80 +36,38 @@ class App extends Component {
           <div className="page" style={{ translateX: "260px" }}>
             <Header handleClick={this.handleClick} />
             <div className="content">
-              <Route
-                exact
-                path="/mailbox/inbox"
-                render={props => (
+              <Switch>
+                <Route exact path="/mailbox/inbox">
                   <Inbox
-                    {...props}
                     users={users}
                     handleActive={this.handleActive.bind(this, 0)}
                   />
-                )}
-              />
-              <Route
-                exact
-                path="/mailbox/mail"
-                render={props => (
-                  <Mail
-                    {...props}
-                    handleActive={this.handleActive.bind(this, 1)}
-                  />
-                )}
-              />
-              <Route
-                exact
-                path="/mailbox/compose"
-                render={props => (
-                  <Compose
-                    {...props}
-                    handleActive={this.handleActive.bind(this, 2)}
-                  />
-                )}
-              />
-              <Route
-                exact
-                path="/gallery"
-                render={props => (
-                  <Gallery
-                    {...props}
-                    handleActive={this.handleActive.bind(this, 3)}
-                  />
-                )}
-              />
-              <Route
-                exact
-                path="/social"
-                render={props => (
+                </Route>
+                <Route exact path="/mailbox/mail">
+                  <Mail handleActive={this.handleActive.bind(this, 1)} />
+                </Route>
+                <Route exact path="/mailbox/compose">
+                  <Compose handleActive={this.handleActive.bind(this, 2)} />
+                </Route>
+                <Route exact path="/gallery">
+                  <Gallery handleActive={this.handleActive.bind(this, 3)} />
+                </Route>
+                <Route exact path="/social">
                   <Social
-                    {...props}
                     users={users}
                     handleActive={this.handleActive.bind(this, 4)}
                   />
-                )}
-              />
-
-              <Route
-                exact
-                path="/blog/posts"
-                render={props => (
+                </Route>
+                <Route exact path="/blog/posts">
                   <Posts
-                    {...props}
                     users={users}
                     handleActive={this.handleActive.bind(this, 5)}
                   />
-                )}
-              />
-              <Route
-                exact
-                path="/blog/post"
-                render={props => (
-                  <Post
-                    {...props}
-                    handleActive={this.handleActive.bind(this, 6)}
-                  />
-                )}
-              />
+                </Route>
+                <Route exact path="/blog/post">
+                  <Post handleActive={this.handleActive.bind(this, 6)} />
+                </Route>
+              </Switch>
             </div>
           </div>
         </div>
