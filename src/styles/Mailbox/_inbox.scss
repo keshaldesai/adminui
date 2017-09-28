@@ -1,9 +1,3 @@
-.inbox {
-  display: flex;
-  flex-direction: column;
-  font-size: 14px;
-}
-
 .inbox-container {
   display: flex;
   flex-flow: row nowrap;
@@ -13,6 +7,10 @@
   padding: 8px 0px;
   border-right: 1px solid #efefef;
   min-width: 300px;
+}
+
+.inbox-emails {
+  flex-grow: 1;
 }
 
 .in-group-title {
@@ -71,8 +69,8 @@
 }
 
 .email {
-  margin: 0px 16px;
-  padding: 16px 0px;
+  padding: 16px 16px;
+  width: 100%;
   border-bottom: 1px solid #efefef;
   &:hover {
     background-color: lightyellow;

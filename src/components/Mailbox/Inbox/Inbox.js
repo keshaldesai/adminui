@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Actions from "./Actions";
 import Mailboxes from "./Mailboxes";
 import Emails from "./Emails";
+import Panel from "../../Shared/Panel";
 
 class Inbox extends Component {
   componentDidMount() {
@@ -9,13 +10,13 @@ class Inbox extends Component {
   }
   render() {
     return (
-      <div className="main inbox">
+      <Panel>
         <Actions />
         <div className="inbox-container">
           <Mailboxes />
           <Emails users={this.props.users} />
         </div>
-      </div>
+      </Panel>
     );
   }
 }
