@@ -8,11 +8,26 @@ $highlight: #1b1d1e;
 $theme: #ff530d;
 
 .sidebar {
+  align-self: stretch;
   background-color: $bg;
-  min-height: 100vh;
   transition: all 500ms ease-in;
-  max-width: 260px;
+  max-width: 240px;
+  min-width: 240px;
   font-size: 16px;
+  min-height: 100%;
+}
+
+.sidebar-overlay {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 100;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 700ms;
 }
 
 .user {
@@ -31,7 +46,8 @@ $theme: #ff530d;
 }
 
 .tabmenu-box {
-  padding: 8px 24px;
+  padding: 8px 16px;
+  text-align: center;
   width: 100%;
   color: darken($theme, 25%);
   cursor: pointer;
@@ -116,11 +132,10 @@ $theme: #ff530d;
 
 @media screen and (max-width: 1000px) {
   .sidebar {
-    position: fixed;
+    position: absolute;
     z-index: 1;
     top: 0;
     left: -350px;
-    overflow-x: hidden;
   }
 }
 

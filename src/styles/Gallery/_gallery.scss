@@ -8,16 +8,16 @@ $font: #839497;
   margin: 0px 8px;
 }
 
+.card-group:last-child {
+  margin-bottom: 24px;
+}
+
 .card {
   background-color: #ffffff;
   text-align: center;
-  margin: 24px 16px;
+  margin: 24px 16px 0px 16px;
   padding: 16px;
   border-radius: 4px;
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
-  justify-content: center;
 }
 
 .card-title {
@@ -28,13 +28,15 @@ $font: #839497;
 
 .card-date {
   color: lighten($font, 15%);
-  padding: 4px 0px;
+  margin: 4px 0px;
 }
 
 .card-likes {
-  padding: 4px 14px;
+  padding: 4px 10px;
   border: 2px solid $font;
   border-radius: 20px;
+  width: 80px;
+  margin: auto;
   cursor: pointer;
   &:hover {
     background-color: #e74c3c;

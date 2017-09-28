@@ -41,7 +41,7 @@ class Sidebar extends Component {
     const { activeTab } = this.state;
     const { users, show, handleClose } = this.props;
     const user = users[0];
-    const style = show ? { transform: "translate(350px)" } : {};
+    const style = show ? { transform: "translate(350px)", zIndex: "1000" } : {};
     const exitStyle = show ? { opacity: 1, visibility: "visible" } : {};
     return (
       <div className="sidebar" style={style}>
