@@ -7,6 +7,8 @@ $theme: #ff530d;
 .header {
   background-color: $bg;
   font-size: 20px;
+  display: flex;
+  align-items: center;
   a {
     text-decoration: none;
     color: #839497;
@@ -17,9 +19,13 @@ $theme: #ff530d;
   color: #ffffff;
   padding: 0px 24px;
   font-weight: bolder;
+  display: flex;
+  align-items: center;
 }
 
 .settings {
+  display: flex;
+  align-items: center;
   margin-left: auto;
 }
 

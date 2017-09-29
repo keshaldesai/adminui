@@ -9,8 +9,13 @@
   align-items: center;
 }
 
-.from-user .sh-icon {
-  margin-right: 8px;
+.from-user {
+  display: flex;
+  align-items: center;
+}
+
+.from-info {
+  margin: 0px 8px;
 }
 
 .from-email {
@@ -23,23 +28,16 @@
   color: lighten(#839497, 25%);
   margin-top: 4px;
 }
+
 .from-extra {
   margin-left: auto;
   text-align: center;
 }
 
-.from-tag {
-  margin: auto;
-  font-weight: bolder;
-  color: #ffffff;
-  background-color: #3498db;
-  padding: 2px 4px;
-  border-radius: 4px;
-  font-size: 10px;
-}
-
 .attach-file {
-  margin-top: 16px;
+  margin: 8px 0px;
+  display: flex;
+  align-items: center;
 }
 
 .attach-size {
@@ -53,11 +51,20 @@
   cursor: pointer;
 }
 
+.mail-reply {
+  border-bottom: none;
+  padding: 24px;
+  cursor: pointer;
+  a {
+    text-decoration: none;
+    color: #839497;
+  }
+}
+
 .reply-box {
   border: 2px solid #839497;
   padding: 8px;
   height: 150px;
-  cursor: text;
 }
 
 @media screen and (max-width: 700px) {

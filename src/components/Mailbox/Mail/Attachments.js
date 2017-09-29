@@ -4,7 +4,7 @@ import AttachItem from "./AttachItem";
 class Attachments extends Component {
   render() {
     return (
-      <div className="mb-block mail-attachments">
+      <div className="mb-block">
         <b>Attachments </b>
         <span className="attach-size">(3 files, 1.2 MB)</span>
         <AttachItem icon="picture-o" fileName="poster.jpeg" fileSize="769 KB" />

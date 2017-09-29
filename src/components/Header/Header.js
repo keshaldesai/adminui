@@ -8,15 +8,15 @@ import { Link } from "react-router-dom";
 class Header extends Component {
   render() {
     return (
-      <div className="header flex-row">
+      <div className="header">
         <span onClick={this.props.handleClick}>
           <HeaderItem button="bars" />
         </span>
-        <div className="logo flex-row">
+        <div className="logo">
           <i className="fa fa-pied-piper fa-2x" aria-hidden="true" />
           <span>My Business</span>
         </div>
-        <div className="settings flex-row">
+        <div className="settings">
           <Link to="/social">
             <HeaderItem button="user" />
           </Link>

@@ -2,7 +2,7 @@ import React from "react";
 
 const AttachItem = ({ icon, fileName, fileSize }) => {
   return (
-    <div className="attach-file flex-row">
+    <div className="attach-file">
       <i className={"fa fa-" + icon} aria-hidden="true" />&nbsp;
       <b>{fileName}</b>&nbsp;
       <span className="attach-size">({fileSize})</span>

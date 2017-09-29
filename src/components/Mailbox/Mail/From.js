@@ -1,11 +1,12 @@
 import React, { Component } from "react";
 import UserIcon from "../../Shared/UserIcon";
+import Label from "../../Shared/Label";
 
 class From extends Component {
   render() {
     return (
       <div className="mb-block mail-from">
-        <div className="from-user flex-row">
+        <div className="from-user">
           <UserIcon
             picture="https://randomuser.me/api/portraits/thumb/men/72.jpg"
             color="#bdd4de"
@@ -21,7 +22,7 @@ class From extends Component {
           </div>
         </div>
         <div className="from-extra">
-          <div className="from-tag">PROPOSALS</div>
+          <Label color="#3498db">PROPOSALS</Label>
           <div className="from-date">Jul 15th, 2:40PM</div>
         </div>
       </div>

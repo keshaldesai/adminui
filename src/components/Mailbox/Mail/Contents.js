@@ -3,7 +3,7 @@ import React, { Component } from "react";
 class Contents extends Component {
   render() {
     return (
-      <div className="mb-block mail-contents">
+      <div className="mb-block">
         <b>Hey,</b>
         <p>
           Suspendisse congue turpis vitae lectus condimentum, non dapibus justo

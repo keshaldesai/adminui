@@ -10,9 +10,7 @@ class HeaderItemDrop extends Component {
           <i className={`fa fa-${button} fa-lg`} aria-hidden="true" />
         </div>
         <div className="header-drop">
-          <Drop type={type}>
-            {children}
-          </Drop>
+          <Drop type={type}>{children}</Drop>
         </div>
       </div>
     );

@@ -4,6 +4,7 @@ import Attachments from "./Attachments";
 import Contents from "./Contents";
 import From from "./From";
 import Reply from "./Reply";
+import Panel from "../../Shared/Panel";
 
 class Mail extends Component {
   componentDidMount() {
@@ -11,13 +12,13 @@ class Mail extends Component {
   }
   render() {
     return (
-      <div className="main mail">
+      <Panel>
         <Actions />
         <From />
         <Contents />
         <Attachments />
         <Reply />
-      </div>
+      </Panel>
     );
   }
 }
