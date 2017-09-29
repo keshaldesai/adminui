@@ -1,5 +1,10 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Redirect
+} from "react-router-dom";
 import Sidebar from "./Sidebar/Sidebar";
 import Gallery from "./Gallery/Gallery";
 import Inbox from "./Mailbox/Inbox/Inbox";
@@ -73,6 +78,7 @@ class App extends Component {
               <Route exact path="/blog/post">
                 <Post handleActive={this.handleActive.bind(this, 6)} />
               </Route>
+              <Redirect from="/" to="/social" />
             </Switch>
           </div>
         </div>
