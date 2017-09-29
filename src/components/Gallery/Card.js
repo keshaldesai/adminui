@@ -18,7 +18,7 @@ class Card extends Component {
     const { title, date, likes, image } = this.props.info;
     const { active, showFull } = this.state;
     const activeStyle = active
-      ? { backgroundColor: "#ff0000", borderColor: "#ff0000", color: "#ffffff" }
+      ? { backgroundColor: "#d62c1a", borderColor: "#d62c1a", color: "#ffffff" }
       : {};
     const newLikes = active ? likes + 1 : likes;
     const imageUrl = `https://images.unsplash.com/photo-${image}?dpr=1&auto=compress,format&fit=crop&w=260&h=195&q=80&cs=tinysrgb&crop=`;

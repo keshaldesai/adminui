@@ -1,11 +1,9 @@
 $font: #839497;
 
-.card-group {
+.gallery {
   display: flex;
   flex-flow: row wrap;
-  align-items: center;
   justify-content: center;
-  margin: 0px 8px;
 }
 
 .card-group:last-child {
@@ -15,7 +13,7 @@ $font: #839497;
 .card {
   background-color: #ffffff;
   text-align: center;
-  margin: 24px 16px 0px 16px;
+  margin: 8px;
   padding: 16px;
   border-radius: 4px;
 }
@@ -23,19 +21,20 @@ $font: #839497;
 .card-title {
   color: darken($font, 15%);
   font-weight: bolder;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .card-date {
   color: lighten($font, 15%);
-  margin: 4px 0px;
+  margin: 4px;
+  font-size: 15px;
 }
 
 .card-likes {
-  padding: 4px 10px;
+  padding: 4px 0px;
   border: 2px solid $font;
   border-radius: 20px;
-  width: 80px;
+  width: 70px;
   margin: auto;
   cursor: pointer;
   &:hover {
