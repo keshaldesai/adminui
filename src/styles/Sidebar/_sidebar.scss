@@ -14,7 +14,8 @@ $theme: #ff530d;
   max-width: 240px;
   min-width: 240px;
   font-size: 16px;
-  min-height: 100%;
+  align-self: stretch;
+  min-height: 100vh;
 }
 
 .sidebar-overlay {

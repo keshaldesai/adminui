@@ -1,5 +1,6 @@
 .social {
   background-color: white;
+  height: 100%;
   textarea {
     font-size: 16px;
     font-family: "Open Sans", sans-serif;
@@ -9,6 +10,10 @@
     border: none;
     outline: none;
   }
+}
+
+.social > .sh-panel:last-of-type {
+  margin-bottom: 24px;
 }
 
 .soc-about {
