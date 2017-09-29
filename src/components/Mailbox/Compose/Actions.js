@@ -5,7 +5,7 @@ class Actions extends Component {
   render() {
     const actionIcons = ["arrow-left", "times"];
     return (
-      <div className="comp-actions mb-block">
+      <div className="mb-block">
         <ButtonGroup icons={actionIcons} />
       </div>
     );
