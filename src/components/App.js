@@ -33,8 +33,8 @@ class App extends Component {
       ? { visibility: "visible", opacity: 1 }
       : { visibility: "hidden", opacity: 0 };
     const pageStyle = showSidebar
-      ? { height: "100vh", overflowY: "hidden" }
-      : {};
+      ? { height: "100vh", overflowY: "hidden", width: "100%" }
+      : { width: "100%" };
     return (
       <Router>
         <div className="app" style={{ overflowY: "hidden" }}>
@@ -45,7 +45,7 @@ class App extends Component {
             page={page}
           />
           <div className="sidebar-overlay" style={overlay} />
-          <div className="page" style={pageStyle}>
+          <div style={pageStyle}>
             <Header handleClick={this.handleClick} />
             <Switch>
               <Route exact path="/mailbox/inbox">

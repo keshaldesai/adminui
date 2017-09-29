@@ -1,6 +1,5 @@
 .in-container {
   display: flex;
-  flex-flow: row nowrap;
 }
 
 .in-mailboxes {
@@ -10,7 +9,7 @@
 }
 
 .in-emails {
-  flex-grow: 1;
+  width: 100%;
 }
 
 .in-group-title {
@@ -71,6 +70,7 @@
   padding: 16px 16px;
   width: 100%;
   border-bottom: 1px solid #efefef;
+  display: flex;
   &:hover {
     background-color: lightyellow;
     cursor: pointer;
@@ -78,7 +78,7 @@
 }
 
 .email-main {
-  padding: 0px 8px;
+  margin: 0px 8px;
 }
 
 .email-name {
@@ -93,7 +93,7 @@
 }
 
 .email-content {
-  margin: 0px 8px;
+  margin: 0px 4px;
 }
 
 @media screen and (max-width: 750px) {
