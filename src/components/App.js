@@ -48,37 +48,37 @@ class App extends Component {
           <div style={pageStyle}>
             <Header handleClick={this.handleClick} />
             <Switch>
-              <Route exact path="/mailbox/inbox">
+              <Route exact path="/adminui/mailbox/inbox">
                 <Inbox
                   users={users}
                   handleActive={this.handleActive.bind(this, 0)}
                 />
               </Route>
-              <Route exact path="/mailbox/mail">
+              <Route exact path="/adminui/mailbox/mail">
                 <Mail handleActive={this.handleActive.bind(this, 1)} />
               </Route>
-              <Route exact path="/mailbox/compose">
+              <Route exact path="/adminui/mailbox/compose">
                 <Compose handleActive={this.handleActive.bind(this, 2)} />
               </Route>
-              <Route exact path="/gallery">
+              <Route exact path="/adminui/gallery">
                 <Gallery handleActive={this.handleActive.bind(this, 3)} />
               </Route>
-              <Route exact path="/social">
+              <Route exact path="/adminui/social">
                 <Social
                   users={users}
                   handleActive={this.handleActive.bind(this, 4)}
                 />
               </Route>
-              <Route exact path="/blog/posts">
+              <Route exact path="/adminui/blog/posts">
                 <Posts
                   users={users}
                   handleActive={this.handleActive.bind(this, 5)}
                 />
               </Route>
-              <Route exact path="/blog/post">
+              <Route exact path="/adminui/blog/post">
                 <Post handleActive={this.handleActive.bind(this, 6)} />
               </Route>
-              <Redirect from="/" to="/social" />
+              <Redirect from="/" to="/adminui/social" />
             </Switch>
           </div>
         </div>

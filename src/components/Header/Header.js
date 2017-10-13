@@ -17,10 +17,10 @@ class Header extends Component {
           <span>My Business</span>
         </div>
         <div className="settings">
-          <Link to="/social">
+          <Link to="/adminui/social">
             <HeaderItem button="user" />
           </Link>
-          <Link to="/mailbox/inbox">
+          <Link to="/adminui/mailbox/inbox">
             <HeaderItem button="envelope" />
           </Link>
           <HeaderItemDrop button="bullhorn" type="notif">

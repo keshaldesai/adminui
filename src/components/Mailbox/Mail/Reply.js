@@ -5,7 +5,7 @@ class Reply extends Component {
   render() {
     return (
       <div className="mail-reply">
-        <Link to="/mailbox/compose">
+        <Link to="/adminui/mailbox/compose">
           <div className="reply-box">Click here to reply</div>
         </Link>
       </div>

@@ -16,17 +16,17 @@ class MainTab extends Component {
             active={page <= 2 && page >= 0}
             notifs="4"
           >
-            <Link to="/mailbox/inbox">
+            <Link to="/adminui/mailbox/inbox">
               <TabItem icon="inbox" title="Inbox" active={page === 0} />
             </Link>
-            <Link to="/mailbox/mail">
+            <Link to="/adminui/mailbox/mail">
               <TabItem
                 icon="envelope-open-o"
                 title="Mail"
                 active={page === 1}
               />
             </Link>
-            <Link to="/mailbox/compose">
+            <Link to="/adminui/mailbox/compose">
               <TabItem
                 icon="pencil-square-o"
                 title="Compose"
@@ -34,10 +34,10 @@ class MainTab extends Component {
               />
             </Link>
           </TabParent>
-          <Link to="/gallery">
+          <Link to="/adminui/gallery">
             <TabItem icon="picture-o" title="Gallery" active={page === 3} />
           </Link>
-          <Link to="/social">
+          <Link to="/adminui/social">
             <TabItem icon="share-alt" title="Social" active={page === 4} />
           </Link>
           <TabParent
@@ -46,10 +46,10 @@ class MainTab extends Component {
             active={page <= 6 && page >= 5}
             notifs="2"
           >
-            <Link to="/blog/posts">
+            <Link to="/adminui/blog/posts">
               <TabItem icon="server" title="Posts" active={page === 5} />
             </Link>
-            <Link to="/blog/post">
+            <Link to="/adminui/blog/post">
               <TabItem
                 icon="file-text-o"
                 title="Single Post"
