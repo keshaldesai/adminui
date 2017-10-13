@@ -30,7 +30,7 @@ class Header extends Component {
             <Feed />
           </HeaderItemDrop>
         </div>
-        <a href="https://google.com">
+        <a href="https://github.com/keshaldesai">
           <HeaderItem button="power-off" />
         </a>
       </div>
