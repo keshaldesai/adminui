@@ -2,6 +2,9 @@
 
 Implementation of a UI for a generic admin page
 
+## Demo
+[https://keshaldesai.github.io/adminui](https://keshaldesai.github.io/adminui)
+
 ## Built With
 
 * [React](https://reactjs.org/)
